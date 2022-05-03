@@ -1,0 +1,12 @@
+---
+sidebar_label: 'Connect using FTPS'
+title: 'Connect using FTPS'
+sidebar_position: 2
+---
+To connect to your SFTP To Go storage using the FTPS protocol, follow these general instructions:
+
+1. Go to your organization dashboard (click **Dashboard** in the menu).
+2. In the credentials list, expand the credentials you'd like to use.
+3. Copy the host, username, and the password to your SFTP client of choice. Make sure you use the default FTPS port (21) in your connection.
+
+Follow this [link](https://sftptogo.com/blog/guides/) for more examples. You can also find useful code snippets in the dashboard by clicking the credentials' menu button (...) and then click `<> Code Snippets`.
