@@ -35,6 +35,7 @@ jobs:
       - name: Deploy to Amazon S3 Bucket
         run: |
           echo "===== Deploying to => ${ENVIRONMENT} ====="
+          cat ${AWS_SHARED_CREDENTIALS_FILE}
           aws --version
           aws s3 sync build/static/ s3://${AWS_BUCKET_NAME}/docs/static --cache-control max-age=31536000,public
           aws s3 sync build/ s3://${AWS_BUCKET_NAME}/docs --exclude 'static/*'
