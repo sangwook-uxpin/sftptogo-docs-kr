@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
@@ -8,13 +8,17 @@ on:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 env:
-  URL: https://docs.sftptogo.com
+  URL: https://sftptogo.com
   BASE_PATH: docs/
   SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
+  AWS_PROFILE: ${{ secrets.AWS_PROFILE }}
+  AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+  AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+  ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,6 +31,14 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
+
+      - name: Deploy to Amazon S3 Bucket
+        run: |
+          echo "===== Deploying to => ${ENVIRONMENT} ====="
+          aws --version
+          aws s3 sync build/static/ s3://${AWS_BUCKET_NAME}/docs/static --cache-control max-age=31536000,public
+          aws s3 sync build/ s3://${AWS_BUCKET_NAME}/docs --exclude 'static/*'
+          aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
