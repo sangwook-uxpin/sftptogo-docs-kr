@@ -10,8 +10,9 @@ Webhooks enable you to receive notifications whenever particular events occur wi
 
 Webhook notifications are sent as HTTPS POST requests to a URL of your choosing. To integrate with webhooks, you need to implement a server endpoint that can receive and handle these requests.
 
-> Warning:
-> Please note that our webhooks don’t work with self-signed certs. If a webhook detects a self-signed cert, it will result in an error and no request will be sent.
+:::info
+Please note that our webhooks don’t work with self-signed certs. If a webhook detects a self-signed cert, it will result in an error and no request will be sent.
+:::
 
 
 To subscribe to webhooks, click **webhooks** from the menu, and then click the `Add webhook` button.
@@ -107,8 +108,9 @@ You should always respond with a 200-level status code to indicate that you had 
 204 No Content
 ```
 
-> Note:
-> If you do not return a 200-level status code, SFTP To Go records the failure. The failure can be viewed in the deliveries log.
+:::note
+If you do not return a 200-level status code, SFTP To Go records the failure. The failure can be viewed in the deliveries log.
+:::
 
 The `Actor` key contains information on the user who performed the action. If the action was performed by an SFTP user, the `Type` would be `User` and the `Id` would be the username. If the action was performed by an IAM user (via S3 APIs), the `Type` would be `IAM` and the `Id` would be the IAM user ID.
 
@@ -151,8 +153,9 @@ The `Actor` key contains information on the user who performed the action. If th
 }
 ```
 
-> note
-> When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::tip
+When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::
 
 
 ### file.deleted Event Format
@@ -194,8 +197,9 @@ The `Actor` key contains information on the user who performed the action. If th
 }
 ```
 
-> note
-> When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::tip
+When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::
 
 
 ### webhook.ping Event Format

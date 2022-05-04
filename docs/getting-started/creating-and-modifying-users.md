@@ -36,7 +36,9 @@ To rotate passwords, click the menu button (...) for the specific user and then 
 
 You may want to temporarily deactivate users so they won't be able to connect to your cloud storage. To do this, click the menu button (...) for the specific user and then select **Deactivate credentials** in the menu. 
 
-> Note that this will not affect open sessions or any of the user's files (i.e. they will be kept intact within your storage).
+:::note
+This will not affect open sessions or any of the user's files (i.e. they will be kept intact within your storage).
+:::
 
 To reactivate users, click the menu button (...) for a deactivated user (displayed with a striped background) and then select **Activate credentials**.
 
@@ -57,7 +59,9 @@ Inbound network rules define IP address ranges that a user can connect to your s
 
 By default, the organization inbound network rules contain a single rule allowing access from any IP address to any protocol (SFTP or FTPS). To restrict access, you will have to remove this rule or edit it to use a restrictive CIDR (Classless Inter-Domain Routing - an IP range).
 
-> Note - editing inbound network rules is only available within certain plans. Read more about our different plans [here](https://sftptogo.com/pricing)
+:::note
+Editing inbound network rules is only available within certain plans. Read more about our different plans [here](https://sftptogo.com/pricing)
+:::
 
 To add user-level inbound network rules, please complete the following steps:
 1. Under the specific user, click **Add inbound rule**.

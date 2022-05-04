@@ -1,7 +1,8 @@
 ---
 sidebar_label: 'Overview'
 title: 'Overview'
-sidebar_position: 1
+sidebar_position: 0
+slug: /
 ---
 [SFTP To Go](https://www.sftptogo.com) is a fully-managed cloud storage that uses standard protocols such as SFTP, FTPS, Amazon S3, and HTTPS to achieve secure file access, transfer, and management. SFTP To Go enables secure data exchange with partners, vendors and customers in a standard protocol without purchasing, running, or maintaining your own servers and storage. It is based on Amazon Web Services (AWS), making it highly scalable and accessible with multi-AZ architecture.
 

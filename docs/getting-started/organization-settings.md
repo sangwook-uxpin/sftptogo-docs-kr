@@ -22,7 +22,7 @@ The organization level rules define the IP ranges from which any set of credenti
 By default, there is a single rule that allows access from any IP address to both the SFTP and FTPS endpoints.
 
 To restrict access to your storage, you may edit, disable, or delete this rule, and either add rules at the organization level or at the 
-[credentials level](../getting-started/creating_and_modifying_users.md)
+[credentials level](../getting-started/creating-and-modifying-users.md)
 To add a new inbound rule:
 
 1. Click **Add inbound rule**.
@@ -33,7 +33,9 @@ To add a new inbound rule:
 
 You can also edit, disable, enable, and delete inbound network rules by clicking the menu button (...) on a specific network rule followed by the relevant menu item.
 
-> Note: editing inbound network rules is only available with certain plans. Read more about our different plans [here](https://sftptogo.com/pricing)
+:::note
+Editing inbound network rules is only available with certain plans. Read more about our different plans [here](https://sftptogo.com/pricing)
+:::
 
 ## Organization
 
@@ -49,7 +51,9 @@ In the billing portal, you can change your billing details (including credit car
 
 If you are billed for SFTP To Go by a partner (e.g. Heroku), the billing section may not show up in your organization section. You can change your billing settings through the relevant partner's website.
 
-> Note: if you'd like to change your plan during a trial, we ask that you please reach out to us via the live-chat button on the bottom-right corner of the screen and request that we modify it. Otherwise, you may be charged.
+:::note
+If you'd like to change your plan during a trial, we ask that you please reach out to us via the live-chat button on the bottom-right corner of the screen and request that we modify it. Otherwise, you may be charged.
+:::
 
 ## Access - team management
 
