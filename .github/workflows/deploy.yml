@@ -10,11 +10,9 @@ on:
 env:
   URL: https://sftptogo.com
   BASE_PATH: docs/
-  SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
-  AWS_PROFILE: ${{ secrets.AWS_PROFILE }}
   AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
   AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-  ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
+  SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
 
 jobs:
   deploy:
@@ -32,27 +30,16 @@ jobs:
       - name: Build website
         run: yarn build
 
+      - name: Configure AWS credentials using GitHub OIDC provider
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: us-east-1
+
       - name: Deploy to Amazon S3 Bucket
         run: |
-          echo "===== Deploying to => ${ENVIRONMENT} ====="
-          cat ${AWS_SHARED_CREDENTIALS_FILE}
+          echo "===== Deploying to => ${AWS_BUCKET_NAME} ====="
           aws --version
           aws s3 sync build/static/ s3://${AWS_BUCKET_NAME}/docs/static --cache-control max-age=31536000,public
           aws s3 sync build/ s3://${AWS_BUCKET_NAME}/docs --exclude 'static/*'
           aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
-
-      # Popular action to deploy to GitHub Pages:
-      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
-          # The following lines assign commit authorship to the official
-          # GH-Actions bot for deploys to `gh-pages` branch:
-          # https://github.com/actions/checkout/issues/13#issuecomment-724415212
-          # The GH actions bot is used by default if you didn't specify the two fields.
-          # You can swap them out with your own user credentials.
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
