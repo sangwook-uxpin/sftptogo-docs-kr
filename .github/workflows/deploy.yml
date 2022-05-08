@@ -46,7 +46,5 @@ jobs:
 
       - name: Deploy to Amazon S3 Bucket
         run: |
-          echo "===== Deploying to => ${AWS_BUCKET_NAME} ====="
-          aws --version
           aws s3 sync --delete --exact-timestamps ./build/ s3://${AWS_BUCKET_NAME}/docs --region ${AWS_DEFAULT_REGION}
           aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
