@@ -13,6 +13,7 @@ env:
   AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
   AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
   SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
+  AWS_DEFAULT_REGION: us-east-1
 
 jobs:
   deploy:
@@ -41,12 +42,10 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          aws-region: us-east-1
 
       - name: Deploy to Amazon S3 Bucket
         run: |
           echo "===== Deploying to => ${AWS_BUCKET_NAME} ====="
           aws --version
-          aws s3 sync build/static/ s3://${AWS_BUCKET_NAME}/docs/static --cache-control max-age=31536000,public
-          aws s3 sync build/ s3://${AWS_BUCKET_NAME}/docs --exclude 'static/*'
+          aws s3 sync --delete --exact-timestamps ./build/ s3://${AWS_BUCKET_NAME}/docs --region ${AWS_DEFAULT_REGION}
           aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
