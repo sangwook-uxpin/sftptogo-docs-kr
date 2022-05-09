@@ -45,6 +45,11 @@ const config = {
           priority: 0.5,
         },
       }),
+      'docusaurus-plugin-segment',
+      {
+        apiKey: process.env.SEGMENT_WRITE_KEY,
+        // Add other options here.
+      },
     ],
   ],
 
@@ -106,9 +111,6 @@ const config = {
       prism: {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
-      },
-      segment: {
-        apiKey: process.env.SEGMENT_WRITE_KEY,
       },
       hideableSidebar: false,
       colorMode: {
