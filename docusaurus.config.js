@@ -45,12 +45,15 @@ const config = {
           priority: 0.5,
         },
       }),
+      
+    ],
+    [
       'docusaurus-plugin-segment',
       {
         apiKey: process.env.SEGMENT_WRITE_KEY,
         // Add other options here.
       },
-    ],
+    ]
   ],
 
   themeConfig:

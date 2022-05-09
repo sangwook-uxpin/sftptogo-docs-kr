@@ -1,4 +1,17 @@
-# Website
+<a href="https://sftptogo.com/"><img alt="SFTP To Go logo" src="https://sftptogo.com/images/logo.svg" height="80" /></a>
+
+_SFTP To Go: Managed cloud storage as a Service_
+
+*Secure cloud storage with SFTP / FTPS / S3 / HTTP file access designed for smooth and easy data transfer and storage.*
+
+SFTP To Go Documentation
+========================
+
+Documentation for [SFTP To Go](https://sftptogo.com).
+
+[![Deploy](https://github.com/crazyantlabs/sftptogo-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/crazyantlabs/sftptogo-docs/actions/workflows/deploy.yml)
+
+# Introduction
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
