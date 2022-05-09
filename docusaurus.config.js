@@ -65,7 +65,8 @@ const config = {
         logo: {
           alt: 'SFTP To Go Logo',
           src: '/img/logo.svg',
-          srcDark: '/img/logo.svg'
+          srcDark: '/img/logo.svg',
+          href: `${process.env.URL}`,
         },
         items: [
           {
@@ -75,11 +76,11 @@ const config = {
             label: 'Docs',
           },
           {
-            to: 'https://sftptogo.com/blog/api-reference/',
+            to: `${process.env.URL}/blog/api-reference/`,
             label: 'API',
             position: 'left'
           },
-          {to: 'https://sftptogo.com/blog/', label: 'Blog', position: 'left'},
+          {to: `${process.env.URL}/blog/`, label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/crazyantlabs/sftptogo-docs',
             position: 'right',
@@ -87,13 +88,13 @@ const config = {
             'aria-label': 'GitHub repository',
           },
           {
-            to: 'https://sftptogo.com/login',
+            to: `${process.env.URL}/login`,
             position: 'right',
             label: 'Sign in',
             className: 'nav-link',
           },
           {
-            to: 'https://sftptogo.com/register',
+            to: `${process.env.URL}/register`,
             position: 'right',
             label: 'Free trial',
             className: 'nav-link cta-link',
@@ -107,7 +108,7 @@ const config = {
           src: 'img/logo.svg',
           width: 32,
           height: 32,
-          href: 'https://sftptogo.com',
+          href: `${process.env.URL}`,
         },
         copyright: `© ${new Date().getFullYear()} <Link>Crazy Ant Labs</Link>`,
       },
@@ -115,7 +116,11 @@ const config = {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
       },
-      hideableSidebar: false,
+      docs: {
+        sidebar: {
+          hideable: false,
+        }
+      },
       colorMode: {
         respectPrefersColorScheme: true,
       },
