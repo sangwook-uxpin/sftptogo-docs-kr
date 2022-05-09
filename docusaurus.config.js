@@ -45,16 +45,20 @@ const config = {
         },
       }),
       
-    ],
+    ]
+  ],
+  plugins: [
     [
       'docusaurus-plugin-segment',
       {
         apiKey: process.env.SEGMENT_WRITE_KEY,
+        page: {
+          category: 'Docs',
+        },
         // Add other options here.
       },
-    ]
+    ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
