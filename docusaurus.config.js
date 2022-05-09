@@ -23,6 +23,7 @@ const config = {
   favicon: '/img/favicon-96x96.png',
   organizationName: 'crazyantlabs',
   projectName: 'sftptogo-docs',
+  trailingSlash: true,
   presets: [
     [
       'classic',
