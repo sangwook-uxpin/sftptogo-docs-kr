@@ -12,7 +12,7 @@ export default function Footer({children}) {
         <a class="margin-left--md" href="/privacy">Privacy</a>
         <a class="margin-left--md" href="/security">Security</a>
         <a class="margin-left--md" href="https://status.crazyantlabs.com/" rel="noopener noreferrer" target="_blank">Status</a>
-        <a class="margin-left--md" href="/docs/" rel="noopener noreferrer" target="_blank">Docs</a>
+        <a class="margin-left--md" href="/docs">Docs</a>
         <a class="margin-left--md" href="mailto:support@crazyantlabs.com" rel="noopener noreferrer" target="_blank">Contact us</a>
         <a class="margin-left--md" href="/integrations/" rel="noopener noreferrer" target="_blank">Integrations</a>
         <a class="margin-left--md" href="/pricing">Pricing</a>
