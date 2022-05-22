@@ -37,6 +37,7 @@ jobs:
           SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
           ALGOLIASEARCH_API_KEY: ${{ secrets.ALGOLIASEARCH_API_KEY }}
           ALGOLIASEARCH_APPLICATION_ID: ${{ secrets.ALGOLIASEARCH_APPLICATION_ID }}
+          ALGOLIASEARCH_INDEX_NAME: ${{ secrets.ALGOLIASEARCH_INDEX_NAME }}
         run: yarn build
 
       - name: Configure AWS credentials using GitHub OIDC provider
@@ -52,4 +53,3 @@ jobs:
         run: |
           aws s3 sync --delete --exact-timestamps ./build/ s3://${AWS_BUCKET_NAME}/docs --region ${AWS_DEFAULT_REGION}
           aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
-
