@@ -63,16 +63,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Uncomment when Algolia Docsearch is approved
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: process.env.ALGOLIASEARCH_APPLICATION_ID,
-      //   // Public API key: it is safe to commit it
-      //   apiKey: process.env.ALGOLIASEARCH_API_KEY,
-      //   // Index name
-      //   indexName: 'docs',
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
-      // },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: process.env.ALGOLIASEARCH_APPLICATION_ID,
+        // Public API key: it is safe to commit it
+        apiKey: process.env.ALGOLIASEARCH_API_KEY,
+        // Index name
+        indexName: process.env.ALGOLIASEARCH_INDEX_NAME,
+        // Optional: see doc section below
+        contextualSearch: true,
+      },
       navbar: {
         hideOnScroll: true,
         title: 'SFTP To Go',
