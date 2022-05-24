@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b #v3
 
-      - uses: actions/setup-node@56337c425554a6be30cdef71bf441f15be286854 # v3
+      - uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048 # v3
         with:
           node-version: 16.x
           cache: yarn
@@ -37,6 +37,7 @@ jobs:
           SEGMENT_WRITE_KEY: ${{ secrets.SEGMENT_WRITE_KEY }}
           ALGOLIASEARCH_API_KEY: ${{ secrets.ALGOLIASEARCH_API_KEY }}
           ALGOLIASEARCH_APPLICATION_ID: ${{ secrets.ALGOLIASEARCH_APPLICATION_ID }}
+          ALGOLIASEARCH_INDEX_NAME: ${{ secrets.ALGOLIASEARCH_INDEX_NAME }}
         run: yarn build
 
       - name: Configure AWS credentials using GitHub OIDC provider
@@ -52,4 +53,3 @@ jobs:
         run: |
           aws s3 sync --delete --exact-timestamps ./build/ s3://${AWS_BUCKET_NAME}/docs --region ${AWS_DEFAULT_REGION}
           aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
-
