@@ -102,7 +102,7 @@ const config = {
             'aria-label': 'GitHub repository',
           },
           {
-            to: `${process.env.URL}/login`,
+            to: `${process.env.URL}/auth/login`,
             position: 'right',
             label: 'Sign in',
             className: 'nav-link',
