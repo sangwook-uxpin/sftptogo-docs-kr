@@ -23,4 +23,4 @@ sftp -i [/path/to/your/private-key] user@hostname
 
 To remove a public key, click the 'X' next to it under the designated credentials.
 
-You may also force all users to use only public key authentication through your organization settings <LINK/>.
+You may also force all users to use only public key authentication through your [organization settings](../getting-started/organization-settings#security).
