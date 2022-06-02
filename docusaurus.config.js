@@ -116,15 +116,40 @@ const config = {
         ],
       },
       footer: {
-        links: [],
-        logo: {
-          alt: 'SFTP To Go Logo',
-          src: 'img/logo.svg',
-          width: 32,
-          height: 32,
-          href: `${process.env.URL}`,
-        },
-        copyright: `© ${new Date().getFullYear()} <Link>Crazy Ant Labs</Link>`,
+          links: [
+              {
+                  label: 'Terms',
+                  href: `${url}/terms-of-service`,
+              },{
+                  label: 'Privacy',
+                  href: `${url}/privacy`,
+              },{
+                  label: 'Security',
+                  href: `${url}/security`,
+              },{
+                  label: 'Status',
+                  href: 'https://status.crazyantlabs.com/',
+              },{
+                  label: 'Docs',
+                  href: `${url}/docs`,
+              },{
+                  label: 'Contact us',
+                  href: 'mailto:support@crazyantlabs.com',
+              },{
+                  label: 'Integrations',
+                  href: `${url}/integrations/`,
+              },{
+                  label: 'Pricing',
+                  href: `${url}/pricing`,
+              },{
+                  label: 'Blog',
+                  href: `${url}/blog/`,
+              },{
+                  label: 'About',
+                  href: `${url}/about`,
+              },
+          ],
+          copyright: `© ${new Date().getFullYear()} <a href="https://crazyantlabs.com">Crazy Ant Labs</a>`,
       },
       prism: {
           theme: lightCodeTheme,

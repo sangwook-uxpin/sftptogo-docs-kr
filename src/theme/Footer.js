@@ -1,29 +1,59 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import {useThemeConfig} from '@docusaurus/theme-common';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import isInternalUrl from '@docusaurus/isInternalUrl';
+import FooterCopyright from '@theme/Footer/Copyright';
+
+function LinkItem({item}) {
+  const {to, href, label, prependBaseUrlToHref, ...props} = item;
+  const toUrl = useBaseUrl(to);
+  const normalizedHref = useBaseUrl(href, {forcePrependBaseUrl: true});
+  return (
+    <Link
+      className="footer__link-item"
+      {...(href
+        ? {
+            href: prependBaseUrlToHref ? normalizedHref : href,
+          }
+        : {
+            to: toUrl,
+          })}
+      {...props}>
+      {label}
+    </Link>
+  );
+}
 
 // Default implementation, that you can customize
 export default function Footer({children}) {
   const year = new Date().getFullYear();
 
+  const {footer} = useThemeConfig();
+  if (!footer) {
+    return null;
+  }
+  const {copyright, links, logo, style} = footer;
+
   return <footer className="margin-bottom--md margin-top--md">
     <div className="container container--fluid">
       <div className="text--center">
-        <a className="" href="/terms-of-service">Terms</a>
-        <a className="margin-left--md" href="/privacy">Privacy</a>
-        <a className="margin-left--md" href="/security">Security</a>
-        <a className="margin-left--md" href="https://status.crazyantlabs.com/" rel="noopener noreferrer" target="_blank">Status</a>
-        <a className="margin-left--md" href="/docs">Docs</a>
-        <a className="margin-left--md" href="mailto:support@crazyantlabs.com" rel="noopener noreferrer" target="_blank">Contact us</a>
-        <a className="margin-left--md" href="/integrations/" rel="noopener noreferrer" target="_blank">Integrations</a>
-        <a className="margin-left--md" href="/pricing">Pricing</a>
-        <a className="margin-left--md" href="/blog/" rel="noopener noreferrer" target="_blank">Blog</a>
-        <a className="margin-left--md" href="/about">About</a>
+        {links.map((item, i) => (
+          <React.Fragment key={i}>
+            {i > 0 ?
+              <span className="margin-left--md">
+                <LinkItem item={item} />
+              </span>
+              :
+              <LinkItem item={item} />
+            }
+          </React.Fragment>
+        ))}
+        {
+          copyright && 
+          <FooterCopyright copyright={copyright} />
+        }
       </div>
-      
     </div>
-    <div className="text--center">
-        <div className="copyright text-center text-muted">© {year} 
-          <a href="https://crazyantlabs.com" rel="noopener noreferrer" target="_blank"> Crazy Ant Labs</a></div>
-      </div>
   </footer>
 }
