@@ -149,7 +149,7 @@ const config = {
                   href: `${url}/about`,
               },
           ],
-          copyright: `© ${new Date().getFullYear()} <a href="https://crazyantlabs.com">Crazy Ant Labs</a>`,
+          copyright: `© ${new Date().getFullYear()} <a class="footer__link-item" href="https://crazyantlabs.com">Crazy Ant Labs</a>`,
       },
       prism: {
           theme: lightCodeTheme,
