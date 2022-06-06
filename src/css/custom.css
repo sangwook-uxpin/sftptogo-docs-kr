@@ -43,7 +43,7 @@ html[data-theme='dark'] {
   --ifm-background-color: #111827;
   --ifm-navbar-background-color: #111827;
   --ifm-footer-background-color: #111827;
-  --ifm-link-hover-color: var(--ifm-color-primary-darkest);
+  --ifm-link-hover-color: var(--ifm-color-primary-darker);
 }
 
 ul>li::marker {

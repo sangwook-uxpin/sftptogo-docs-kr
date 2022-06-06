@@ -80,7 +80,7 @@ const config = {
           alt: 'SFTP To Go Logo',
           src: '/img/logo.svg',
           srcDark: '/img/logo.svg',
-          href: `${process.env.URL}`,
+          href: `${url}`,
         },
         items: [
           {
@@ -90,11 +90,11 @@ const config = {
             label: 'Docs',
           },
           {
-            to: `${process.env.URL}/blog/api-reference/`,
+            to: `${url}/blog/api-reference/`,
             label: 'API',
             position: 'left'
           },
-          {to: `${process.env.URL}/blog/`, label: 'Blog', position: 'left'},
+          {to: `${url}/blog/`, label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/crazyantlabs/sftptogo-docs',
             position: 'right',
@@ -102,13 +102,13 @@ const config = {
             'aria-label': 'GitHub repository',
           },
           {
-            to: `${process.env.URL}/auth/login`,
+            to: `${url}/auth/login`,
             position: 'right',
             label: 'Sign in',
             className: 'nav-link',
           },
           {
-            to: `${process.env.URL}/register`,
+            to: `${url}/register`,
             position: 'right',
             label: 'Free trial',
             className: 'nav-link cta-link',
