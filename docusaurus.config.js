@@ -131,7 +131,7 @@ const config = {
                   href: 'https://status.crazyantlabs.com/',
               },{
                   label: 'Docs',
-                  href: `${url}/docs`,
+                  href: '/',
               },{
                   label: 'Contact us',
                   href: 'mailto:support@crazyantlabs.com',
