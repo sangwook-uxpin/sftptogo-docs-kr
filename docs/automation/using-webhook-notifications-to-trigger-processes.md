@@ -8,7 +8,7 @@ Webhooks enable you to receive notifications whenever particular events occur wi
 * File / directory creation
 * File / directory deletion
 
-Webhook notifications are sent as HTTPS POST requests to a URL of your choosing. To integrate with webhooks, you need to implement a server endpoint that can receive and handle these requests.
+Webhook notifications are sent as HTTP POST requests to a URL of your choosing. To integrate with webhooks, you need to implement a server endpoint that can receive and handle these requests.
 
 :::info
 Please note that our webhooks don’t work with self-signed certs. If a webhook detects a self-signed cert, it will result in an error and no request will be sent.
@@ -22,7 +22,7 @@ In the dialog that opens, fill out the following:
 * Endpoint
   * URL - HTTPS URL of the endpoint that will receive all webhook notifications.
   * Type - select one of the supported endpoint types:
-    * Webhook - send a HTTPS POST requests to the endpoint URL
+    * Webhook - send a HTTP POST requests to the endpoint URL
     * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack)
 * Authorization Header (optional) - a custom `Authorization` header that will be included with all webhook notifications.
 * Topics - select the types of notifications you want to be informed about. You must include at least one topic.
