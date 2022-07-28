@@ -19,11 +19,11 @@ To subscribe to webhooks, click **Webhooks** from the menu, and then click the `
 In the dialog that opens, fill out the following:
 
 * Nickname (optional) - a descriptive name for your webhook.
-* Endpoint
+* Endpoint  
   * URL - HTTPS URL of the endpoint that will receive all webhook notifications.
-  * Type - select one of the supported endpoint types:
-    * Webhook - send a HTTP POST requests to the endpoint URL
-    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack)
+  * Type - select one of the supported endpoint types:  
+    * Webhook - send a HTTP POST requests to the endpoint URL.
+    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack).
 * Authorization Header (optional) - a custom `Authorization` header that will be included with all webhook notifications.
 * Topics - select the types of notifications you want to be informed about. You must include at least one topic.
 
