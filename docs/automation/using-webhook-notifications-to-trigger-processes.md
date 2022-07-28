@@ -14,13 +14,16 @@ Webhook notifications are sent as HTTPS POST requests to a URL of your choosing.
 Please note that our webhooks don’t work with self-signed certs. If a webhook detects a self-signed cert, it will result in an error and no request will be sent.
 :::
 
-
-To subscribe to webhooks, click **webhooks** from the menu, and then click the `Add webhook` button.
+To subscribe to webhooks, click **Webhooks** from the menu, and then click the `Add webhook` button.
 
 In the dialog that opens, fill out the following:
 
 * Nickname (optional) - a descriptive name for your webhook.
-* Endpoint URL - HTTPS URL of your server endpoint that will receive all webhook notifications.
+* Endpoint
+  * URL - HTTPS URL of the endpoint that will receive all webhook notifications.
+  * Type - select one of the supported endpoint types:
+    * Webhook - send a HTTPS POST requests to the endpoint URL
+    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack)
 * Authorization Header (optional) - a custom `Authorization` header that will be included with all webhook notifications.
 * Topics - select the types of notifications you want to be informed about. You must include at least one topic.
 
@@ -45,7 +48,7 @@ After creating a webhook, you may do the following:
 
 ### Receiving Webhooks
 
-When a webhook event that you’ve subscribed to occurs, SFTP To Go sends a POST request to your server endpoint consisting of the events’ details.
+When a webhook event that you've subscribed to occurs, SFTP To Go sends a POST request to your server endpoint consisting of the events’ details.
 
 You can verify the authenticity of these requests through any of the following ways:
 
