@@ -23,9 +23,10 @@ In the dialog that opens, fill out the following:
   * URL - HTTPS URL of the endpoint that will receive all webhook notifications.
   * Type - select one of the supported endpoint types:  
     * Webhook - send a HTTP POST requests to the endpoint URL.
-    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack).
+    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/oauth/v2/authorize?client_id=754603809072.3867924020054&scope=incoming-webhook&user_scope=).  
 * Authorization Header (optional) - a custom `Authorization` header that will be included with all webhook notifications.
 * Topics - select the types of notifications you want to be informed about. You must include at least one topic.
+* Filter - apply filtering rules to trigger notifications that meet the specified criteria, i.e. have (or don't have) certain properties.
 
 Finish by clicking `Add webhook`.
 
