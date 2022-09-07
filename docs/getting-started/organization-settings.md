@@ -52,10 +52,23 @@ In the billing portal, you can change your billing details (including credit car
 If you are billed for SFTP To Go by a partner (e.g. Heroku), the billing section may not show up in your organization section. You can change your billing settings through the relevant partner's website.
 
 :::note
-If you'd like to change your plan during a trial, we ask that you please reach out to us via the live-chat button on the bottom-right corner of the screen and request that we modify it. Otherwise, you may be charged.
+If you'd like to change your plan during a trial, we ask that you please reach out to us via the live-chat button on the bottom-right corner of the screen and request that we modify it. Otherwise, your credit card may be automatically charged.
 :::
 
 ## Access - team management
 
-The access section lists the accounts that have access to an organization's management dashboard.
+The access section lists the accounts that have access to an organization's management dashboard and allows owners to invite more team members.
 
+To invite a new member to your organization, scroll down to the **Access** section and click **Invite team member**. Fill out the team member's name and email address and an invitation will be sent out for the new member to join your organization. After clicking the invitation link, the new member will be requested to create a password. Once logged in, the new member will be able to access the organization according to the assigned role.
+
+:::note
+If access to SFTP To go is managed by a partner (e.g. Heroku), use the partner's access management to add or remove team members.
+:::
+
+To remove a member from the organization, click the menu button (...) and then **Remove from team**.
+
+To change an existing member role, click the menu button (...) and then **Change role**.
+
+:::note
+An account must have at least one owner account.
+:::
