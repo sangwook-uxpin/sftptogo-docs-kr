@@ -17,8 +17,6 @@
     "@docsearch/react": "3.2.1",
     "@docusaurus/core": "^2.1.1",
     "@docusaurus/preset-classic": "^2.0.1",
-    "@docusaurus/core": "^2.0.1",
-    "@docusaurus/preset-classic": "^2.0.1",
     "@docusaurus/theme-classic": "^2.0.1",
     "clsx": "^1.2.1",
     "docusaurus-plugin-segment": "^1.0.4",
