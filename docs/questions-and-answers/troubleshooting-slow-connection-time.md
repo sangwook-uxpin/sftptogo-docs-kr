@@ -9,7 +9,7 @@ If opening a connection to your SFTP To Go host takes a long time or if you come
 
 1. Try to connect to SFTP To Go from a different computer. The problem may be your computer and services (e.g. anti-virus apps) that are causing these connectivity issues. If it works well on the new computer, it is recommended that you resolve issues found within your computer.
 
-1. If, after running these two tests, you still experience slow connection time or connection timeouts, use the following command pattern on a Mac console to get a client side log with timestamps. Replace `URL` with your add-on URL (copied from the add-on dashboard):
+1. If, after running these two tests, you still experience slow connection time or connection timeouts, use the following command pattern on a Mac console to get a client side log with timestamps. Replace `URL` with your organization's URL (copied from the SFTP To Go dashboard):
 
 ```shell
 sftp -v URL 2>&1 | while read line; do echo "`date -u +"%Y-%m-%dT%H:%M:%SZ"` $line"; done

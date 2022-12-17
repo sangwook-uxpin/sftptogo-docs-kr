@@ -30,7 +30,7 @@ You may edit existing credentials by clicking the menu button (...) for the part
 
 ### Rotating user passwords
 
-To rotate passwords, click the menu button (...) for the specific user and then select **Rotate Password** in the menu. A new password will be generated for the user and you'll be able to immediately copy it from the dashboard.
+To rotate passwords, click the menu button (...) for the specific user and then select **Rotate Password** in the menu. A new password will be generated for the user and you'll be able to immediately copy it from the credentials list.
 
 ### Deactivating and reactivating users
 

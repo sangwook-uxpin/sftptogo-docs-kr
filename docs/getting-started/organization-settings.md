@@ -43,7 +43,9 @@ The organization is the top level object that holds the storage, credentials, we
 
 Within the organization section, you may change your organization's name and obtain your organization's unique identifier, which we may request from you during support conversations.
 
-## Billing
+## Usage & Billing
+
+Track your usage - storage and bandwidth metrics (Note that the metrics are update at certain intervals and not in real-time).
 
 To change your organization's billing plan, Scroll to the billing section and click **Open your billing portal**.
 

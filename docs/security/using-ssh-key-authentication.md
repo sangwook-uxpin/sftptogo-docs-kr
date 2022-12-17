@@ -9,7 +9,7 @@ If you don't have a private/public key pair, generate a key pair on your local m
 
 To connect using public key authentication, first add a public key to the credentials you'd like to use:
 
-1. Go to your organization dashboard (click **Dashboard** in the menu).
+1. Go to your organization credentials list (click **Credentials** in the menu).
 2. In the credentials list, expand the credentials you'd like to add a public key for.
 3. Click **Import SSH key**.
 4. Paste the public key. Make sure it begins with `ssh-rsa`.
