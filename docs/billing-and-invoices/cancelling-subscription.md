@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'Cancelling Subscription'
-title: 'Cancelling Subscription'
+sidebar_label: 'Cancelling Subscriptions'
+title: 'Cancelling Subscriptions'
 sidebar_position: 90
 ---
 We'd hate to see you go, but we understand that sometimes it just wasn't meant to happen. Once you cancel your subscription, you'd still be able to access your organization (files and management dashboard) until your subscription period expires (i.e. end of your trial, end of the monthly subscription or end of your annual subscription). 
