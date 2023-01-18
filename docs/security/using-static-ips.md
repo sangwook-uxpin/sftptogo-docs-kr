@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'Using Static IPs'
 title: 'Using Static IPs'
-sidebar_position: 1
+sidebar_position: 12
 ---
 SFTP To Go's hostnames are mapped to static IPs to allow customers the option to add outbound network rules to their local infrastructure. Keep in mind that some legacy systems require an IP address (instead of a hostname) to connect to an SFTP server.
 

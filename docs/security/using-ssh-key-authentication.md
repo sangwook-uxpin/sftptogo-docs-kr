@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'Using SSH Key Authentication'
 title: 'Using SSH Key Authentication'
-sidebar_position: 1
+sidebar_position: 11
 ---
 SSH key authentication allows you to connect to your cloud storage without a password and without passing private information between the client and the server.
 

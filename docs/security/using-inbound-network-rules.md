@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'Using Inbound Network Rules'
 title: 'Using Inbound Network Rules'
-sidebar_position: 3
+sidebar_position: 30
 ---
 Inbound network rules define IP address ranges from which a user can connect to your storage. They can be defined at the [organization level](../getting-started/organization-settings.md) (for all users) or at the [user level](../getting-started/creating-and-modifying-users.md) (for a specific user).
 
