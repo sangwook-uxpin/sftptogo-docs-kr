@@ -59,7 +59,7 @@ If you'd like to change your plan during a trial, we ask that you please reach o
 
 ## Access - team management
 
-The access section lists the accounts that have access to an organization's management dashboard and allows owners to invite more team members.
+The access section lists the accounts that have access to an organization's management dashboard and allows owners to invite more team members, track their usage and their Multi-factor authentication status.
 
 To invite a new member to your organization, scroll down to the **Access** section and click **Invite team member**. Fill out the team member's name and email address and an invitation will be sent out for the new member to join your organization. After clicking the invitation link, the new member will be requested to create a password. Once logged in, the new member will be able to access the organization according to the assigned role.
 
