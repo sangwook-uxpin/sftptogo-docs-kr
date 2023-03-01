@@ -16,7 +16,7 @@ You can create multiple users with the same home directory, which is beneficial 
 Case 1 - Access separation
 ---------------------
 
-In the basic scenario, each user has access to its own folder and there is complete separation between the users, therefore no user can access another user's files, except the root user that already has access to the entire storage.
+In the basic scenario, each user has access to its own folder and there is complete separation between the users, therefore no user can access another user's files, except the root user that already has access to the entire storage. Both Jane and Kate have read and write access to their corresponding home folders. Mila has write-only access to her home folder and Zoe has read-only access to her home folder.
 
 ![One folder for each user](../../static/img/homedirectory1-simple.png)
 
