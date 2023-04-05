@@ -1,37 +1,37 @@
 ---
-sidebar_label: 'Setting up user home directories'
-title: 'Setting up user home directories'
+sidebar_label: '사용자 홈 디렉토리 설정'
+title: '사용자 홈 디렉토리 설정'
 sidebar_position: 15
 ---
-Users are created to grant people and machines access to the files stored within your organization's storage through SFTP, FTPS, or web access. 
+SFTP, FTPS 또는 웹 액세스를 통해 조직 스토리지에 저장된 파일에 액세스할 수 있도록 사용자를 만듭니다. 
 
-Each organization starts with a single root user that has full access to the entirety of the storage. This means that it can access the root directory (`/`) along with any directory or file within it.
+각 조직은 전체 스토리지에 전체 액세스 할 수있는 단일 루트 사용자로 시작합니다. 즉, 루트 디렉토리(`/`)와 그 안의 임의의 디렉토리 및 파일에 액세스할 수 있는 것을 의미합니다.
 
-In order to provide restricted access to files and to be able to distinguish between users, you may [create more users](../getting-started/creating-and-modifying-users.md). 
+파일에 대한 액세스를 제한하고, 사용자를 구별할 수 있도록 [더 많은 사용자를 생성](../getting-started/creating-and-modifying-users.md)할 수 있습니다.. 
 
-Each user is equipped with a designated home directory and a permission set. Additionally, they are chrooted to their home directory, meaning that they only have access to their designated home directory as well as any files and folders underneath it. They do not have access to parent or sibling directories. In addition, when logging in with a specific user, its home directory would appear as root to it. For example, if `John`'s home directory is `/home/john/` and it contains a single file `example.txt`, once logged in, it would appear to John that there is a file `/example.txt` that is accessible to him.
+각 사용자는 지정된 홈 디렉토리와 일련의 권한이 있습니다. 또한 홈 디렉토리에 chrooted(루트변경)됩니다. 즉, 지정된 홈 디렉토리와 그 아래의 파일 및 폴더에만 액세스 할 수 있습니다. 상위/피어 디렉토리에 액세스 할 수 없습니다. 또한 특정 사용자로 로그인하면 그 사용자의 홈 디렉토리가 경로로 표시됩니다. 예를 들어, `John`의 홈 디렉토리가 `/home/john/`인 경우 `example.txt`라는 파일이 하나가 포함되어 있고 로그인하면 John은 `/example.txt`라는 파일만 접근할 수 있습니다.
 
-You can create multiple users with the same home directory, which is beneficial if you want to permit them to access the same files (potentially, with different permissions), or nest home directories (that is, one home directory is a sub-directory of another home directory) for more advanced user access scenarios.
+동일한 홈 디렉토리를 갖는 복수의 사용자를 만들 수 있습니다. 이것은 여러 명이 동일한 파일에 액세스할 수 있도록 하기에 매우 편리합니다 (각각 다른 권한을 줄 수도 있습니다). 좀더 고급 사용자 액세스 시나리오로서 홈 디렉토리를 다중 중첩시킬 수도 있습니다 (즉, 하나의 홈 디렉토리를 다른 홈 디렉토리의 하위 디렉토리로 설정할 수 있습니다).
 
-Case 1 - Access separation
+사례1 - 액세스 분리
 ---------------------
 
-In the basic scenario, each user has access to its own folder and there is complete separation between the users, therefore no user can access another user's files, except the root user that already has access to the entire storage. Both Jane and Kate have read and write access to their corresponding home folders. Mila has write-only access to her home folder and Zoe has read-only access to her home folder.
+가장 기본적인 시나리오로서, 각 사용자는 각자의 폴더에 액세스할 수 있으며 사용자 간에는 완전히 분리되어 있으므로 전체 스토리지에 이미 액세스할 수있는 루트 사용자를 제외한 다른 사용자의 파일에는 액세스할 수 없습니다. 예를 들어, Jane과 Kate는 각자 자신의 홈 폴더에 읽기 쓰기 권한을 가지고 있습니다. Mila는 홈 폴더에 쓰기전용 권한이 일으며 Zoe는 홈 폴더에서 읽기 전용 권한만 가게 됩니다.
 
 ![One folder for each user](../../static/img/homedirectory1-simple.png)
 
 
-Case 2 - Shared folders
+사례 2 - 공유 폴더
 ---------------------
 
-In this scenario, Jane and Kate have read and write access to `/home/marketing/`, while Mila and Zoe have access to `/home/sales/`. Mila has read and write access to her home directory, while Zoe has read-only access. Jane and Kate can't access files in `/home/sales` , and Mila and Zoe cannot access any file or folder within `/home/marketing/`. Keep in mind that the root user can continue to access any folder or file. 
+이 시나리오에서는 Jane과 Kate는 `/home/marketing/`에 액세스 할 수 있으며 Mila와 Zoe는 `/home/sales/`에 액세스 할 수 있습니다. Mila는 자신의 홈 디렉토리에서 읽기 쓰기 권한이 있으며 Zoe는 읽기 전용 권한만 있습니다. Jane과 Kate는 `/home/sales`의 파일에 액세스할 수 없으며 Mila와 Zoe는 `/home/marketing`의 파일 또는 폴더에 액세스할 수 없습니다. 루트 사용자는 폴더나 파일에 모두에 액세스할 수 있다는 것을 잊지 마십시오.
 
 ![Shared folders](../../static/img/homedirectory2-multi-users-one-directory.png)
 
-Case 3 - Nested folders
+사례 3 - 중첩 폴더
 ---------------------
 
-In this scenario, Jane has read/write access to `/vendors/` and Mila has read-only access to `/vendors/`. Then, our vendor users, that for lack of creativity are named `vendor1`, `vendor2` and `vendor3`, have access to their corresponding home directories with write-only access. The vendors cannot access each other's folders, but Mila and Jane have access to any file uploaded by each one of the vendors.
+이 시나리오에서 Jane은 `/vendors/`에 대해 읽기 쓰기 권한을 가지고 있으며 Mila는 `/vendors/`에 대해 읽기전용 권한이 있습니다. 또한 공급업체(vendors)의 사용자는 `vendor1`, `vendor2` 및 `vendor3`라는 식으로 이름을 설정하고 각각의 홈 디렉토리에 쓰기전용으로만 액세스할 수 있습니다. 공급업체는 서로의 폴더에 액세스할 수 없지만 Mila와 Jane은 각 공급업체가 업로드한 파일에 액세스할 수 있습니다.
 
 ![nested folders](../../static/img/homedirectory3-nested-subdirectories.png)
 
