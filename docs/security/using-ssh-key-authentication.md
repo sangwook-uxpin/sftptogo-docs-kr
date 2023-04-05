@@ -1,26 +1,26 @@
 ---
-sidebar_label: 'Using SSH Key Authentication'
-title: 'Using SSH Key Authentication'
+sidebar_label: 'SSH 키 인증서 사용'
+title: 'SSH 키 인증서 사용'
 sidebar_position: 11
 ---
-SSH key authentication allows you to connect to your cloud storage without a password and without passing private information between the client and the server.
+SSH 키 인증은 패스워드 없이 클라이언트와 서버간에 비공개 정보를 전달하지 않고 클라우드 스토리지에 연결할 수 있게 해줍니다.
 
-If you don't have a private/public key pair, generate a key pair on your local machine (See [here](https://sftptogo.com/blog/how-to-create-ssh-keys-on-windows-10/) for help).
+비밀/공개 키 쌍이 없는 경우 로컬 컴퓨터에서 키 쌍을 생성하십시오 (도움말을 보려면 [여기](https://sftptogo.com/blog/how-to-create-ssh-keys-on-windows-10/)를 참조하세요).
 
-To connect using public key authentication, first add a public key to the credentials you'd like to use:
+공개 키 인증을 사용하여 연결하려면 먼저 사용된 인증정보에 공개 키를 추가하십시오:
 
-1. Go to your organization credentials list (click **Credentials** in the menu).
-2. In the credentials list, expand the credentials you'd like to add a public key for.
-3. Click **Import SSH key**.
-4. Paste the public key. Make sure it begins with `ssh-rsa`.
-5. Click **Import SSH key**.
+1. 조직의 인증정보 목록으로 이동하십시오 (메뉴에서 **Credentials(인증정보)** 을 클릭하십시오).
+2. 인증정보 목록에서 공개 키를 추가하고자 하는 인증정보를 엽니다.
+3. **Import SSH key(SSH 키 가져오기)** 를 클릭합니다.
+4. 공개 키를 붙여 넣으십시오. `ssh-rsa`로 시작하는지를 확인합니다.
+5. **Import SSH key(SSH 키 가져오기)** 를 클릭합니다.
 
-Then, get your SFTP client acquainted with your private key to use it instead of a password. For example, with the sftp command line interface, use the following syntax:
+다음으로 SFTP 클라이언트가 비밀 키를 인식하고 패스워드 대신 비밀 키를 사용하도록 하십시오. 예를 들어 SFTP 명령 줄 인터페이스는 다음 구문을 사용합니다:
 
 ```shell
 sftp -i [/path/to/your/private-key] user@hostname
 ```
 
-To remove a public key, click the 'X' next to it under the designated credentials.
+공개 키를 삭제하려면 지정된 인증정보에 있는 'X'를 클릭하십시오.
 
-You may also force all users to use only public key authentication through your [organization settings](../getting-started/organization-settings#security).
+또한, [조직 설정](../getting-started/organization-settings#security)에 따라 모든 사용자가 공개 키 인증 만 사용하도록 할 수 있습니다.
