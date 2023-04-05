@@ -1,16 +1,16 @@
 ---
-sidebar_label: 'Billing'
-title: 'Billing'
+sidebar_label: '과금'
+title: '과금'
 sidebar_position: 1
 ---
-When you first sign up for SFTP To Go, you select a plan and enter your credit card information.
+SFTP To Go에 가입하면 플랜을 선택하고 신용카드 정보를 입력하십시오.
 
-When your trial period is over, you will be charged according to your plan and billing period.
+트라이얼 기간이 끝나면 플랜 및 청구 간격에 따라 과금을 시작합니다.
 
-To change your billing or credit card information, plan, or to view your invoices history, go to your billing portal:
-1. Click **Settings** in the dashboard menu.
-2. Scroll to the billing section and click **Open your billing portal**.
+청구서 정보 또는 신용카드 정보를 변경하거나 청구서 이력을 표시하려면 Billing Portal (청구 포털)에 액세스하십시오:
+1. 대시보드 메뉴에서 **Setting(설정)** 을 클릭하십시오.
+2. 청구 섹션으로 스크롤하여 **Open your billing portal(나의 청구 포털 열기)** 을 클릭하십시오.
 
-:::caution
-Durin trial, please reach out to us to change your plan. If you change it in the billing portal, your credit card will be charged.
+:::주의
+트라이얼 기간 동안 플랜을 변경하려면 당사에 문의하십시오. 청구 포털에서 변경할 경우 트라이얼 기간중에도 등록하신 신용카드 정보로 해당 플랜에 대한 과금이 바로 시작됩니다.
 :::
