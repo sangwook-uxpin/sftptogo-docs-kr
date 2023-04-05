@@ -1,43 +1,42 @@
 ---
-sidebar_label: 'Overview'
-title: 'Security Overview'
+sidebar_label: '개요'
+title: '정보보안 개요'
 sidebar_position: 10
 ---
-SFTP To Go prioritizes security, as we understand that keeping your data safe is fundamental to your business.
+SFTP To Go는 고객의 데이터를 안전하게 유지할 뿐만 아니라 보안을 항상 최우선으로 하고 있습니다.
 
-Authentication
+인증 방법에 대해
 ---------
 
-There are two types of logins in SFTP To Go:
+SFTP To Go에는 두 가지 유형의 로그인이 있습니다:
 
-1. Accounts - accounts are members in one or more organization and have the ability to manage files, credentials, webhooks, inbound network rules and other settings at the organization level.
+1. 계정 - 계정은 하나 또는 여러 조직의 구성원이며 파일, 인증정보, Webhook, 인바운드 네트워크 규칙 및 조직 단위에서 다른 설정을 관리하는 기능이 있습니다.
 
-2. Credentials - credentials have access to upload, download or manage files in your SFTP To Go storage. They can be used by humans and machines alike.
+2. 인증정보 - 인증정보는 SFTP To Go 스토리지 내의 파일 업로드, 다운로드 및 관리에 액세스하는 권한을 가지고 있습니다.
 
-Accounts use SFTP To Go's web dashboard to login, using an email address, a password and optionally an MFA device.
+계정은 이메일주소, 패스워드 및 선택사항인 MFA (다요소인증) 장치를 사용하여 SFTP To Go의 웹 대시보드에 로그인할 수 있습니다.
 
-Credentials can access files using secure protocols such as SFTP, FTPS, and S3 using user and password authentication. Passwords are strong by default and can be rotated at any time. We recommend rotating passwords every 60 days.
+인증정보는 사용자 및 패스워드 인증을 사용하여 SFTP, FTPS 및 S3와 같은 안전한 프로토콜을 사용하여 파일에 액세스 할 수 있습니다. 패스워드는 디폴트 설정으로 강력하게 설정되어 있으며 언제든지 변경할 수 있습니다. 패스워드는 60일마다 변경하는 것을 권장합니다.
 
-Public key authentication is available with SFTP. The supported algorithms are ssh-ed25519, rsa-sha2-256, rsa-sha2-512, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, and ecdsa-sha2-nistp521, including 4096-bit key pairs.
+공개 키 인증은 SFTP에서 제공됩니다. 지원되는 알고리즘은 ssh-ed25519, rsa-sha2-256, rsa-sha2-512, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384 및 ecdsa-sha2-nistp521(4096비트의 키쌍 포함)입니다.
 
 
-Authorization
+권한에 대하여
 ---------
 
-Credentials are assigned permissions (full access, read-only, write-only or read-write) and a home directory to which they are bound (chrooted). Multiple credentials can have access to the same home directory or to a parent directory and child directories (e.g. user `marketing` has access to `marketing/`, while user `marketing-partner1` has access to `marketing/partner1` and `marketing-partner2` has access to `marketing/partner2`).
+인증정보에는 권한(전체 액세스, 읽기전용, 쓰기전용, 또는 읽기쓰기) 및 바인드(chrooted)되어진 홈 디렉토리가 할당됩니다. 여러 인증정보는 동일한 홈 디렉토리 또는 상위/하위 디렉토리에 액세스 할 수 있습니다. (예를 들어, 사용자 `marketing`은 `marketing/`에 액세스 가능하고, 사용자 `marketing-partner1`은 `marketing/partner1`에, 사용자 `marketing-partner2`는 `marketing/partner2`에 각각 액세스 할 수 있습니다.)
 
-
-Data encryption
+데이터 암호화
 ---------
 
-Both control and data channels are encrypted over the wire using the aforementioned protocols. In addition, data is encrypted at rest using server side 256 bit Advanced Encryption Standard (AES-256) on Amazon S3.
+컨트롤 및 데이터 채널은 모두 위에 언급한 프로토콜을 사용하여 네트워크 상에서 암호화됩니다. 또한 데이터는 Amazon S3에서 서버 측 256비트 고급 암호화 표준 (AES-256)을 사용하여 정지(at rest) 상태로 설정됩니다.
 
-Access Restriction
+액세스 제한
 ---------
 
-Depending on your plan, you may add inbound network rules at the organization or at the credential level to restrict access to certain IP address ranges. In addition we use static IPs with all of our host endpoints, so that if any users require outbound network rules, they can use static IPs to allow access to SFTP To Go from their network.
+플랜에 따라 조직에 인바운드 네트워크 규칙을 추가하여 특정 IP 주소 범위에 대한 액세스를 제한할 수 있습니다. SFTP To Go는 모든 호스트 엔드포인트에서 정적 IP를 사용하므로 아웃 바운드 네트워크 규칙이 필요한 경우 정적 IP를 사용하여 네트워크 상에서 SFTP To Go에 액세스할 수 있도록 허가할 수 있습니다.
 
-Auditing
+감사
 -------
 
-Login attempts, sessions and file access is audited and stored in logs, which can be made available upon request.
+로그인 시도, 세션 및 파일 액세스는 기록되어 요청에 따라 사용할 수 있습니다.
