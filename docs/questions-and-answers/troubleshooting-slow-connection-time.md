@@ -1,26 +1,26 @@
 ---
-sidebar_label: 'Troubleshooting slow connection time'
-title: 'Troubleshooting slow connection time'
+sidebar_label: '느린 연결 시간에 대한 해결책'
+title: '느린 연결 시간에 대한 해결책'
 sidebar_position: 1
 ---
-If opening a connection to your SFTP To Go host takes a long time or if you come across connection timeouts in your client, follow these steps to troubleshoot:
+SFTP To Go 호스트에 연결을 개시하는데 시간이 오래 걸리거나, 클라이언트에서 연결 시간 초과가 발생한다면, 다음 순서를 따라 해결해 보세요:
 
-1. Try to connect to SFTP To Go from a different network. There may be issues within your local network that are causing these connectivity issues. If it works well on the new network, it is recommended that you resolve the issues found within your network.
+1. 다른 네트워크에서 SFTP To Go에 연결을 시도해 보세요. 로컬 네트워크에 이러한 연결 문제를 일으키는 경우가 있습니다. 새로운 네트워크에서 잘 작동하는 경우라면, 기존 네트워크에서 발견된 문제를 해결하는 것이 좋습니다.
 
-1. Try to connect to SFTP To Go from a different computer. The problem may be your computer and services (e.g. anti-virus apps) that are causing these connectivity issues. If it works well on the new computer, it is recommended that you resolve issues found within your computer.
+1. 다른 컴퓨터에서 SFTP To Go에 연결을 시도해 보세요. 이러한 연결 문제를 유발하는 원인이 컴퓨터 또는 서비스(예: 바이러스 백신 소프트웨어)에 있을 수 있습니다. 새 컴퓨터에서 잘 작동하는 경우 해당 컴퓨터에서 원인을 찾아 해결하는 것이 좋습니다.
 
-1. If, after running these two tests, you still experience slow connection time or connection timeouts, use the following command pattern on a Mac console to get a client side log with timestamps. Replace `URL` with your organization's URL (copied from the SFTP To Go dashboard):
+1. 위의 두 테스트를 실행 한 후에도 여전히 연결 시간이 느리거나 연결 시간 초과가 발생하면 Mac 콘솔에서 다음 명령 패턴을 사용하여 타임스탬프를 이용해 클라이언트측 로그를 취득해 보세요. `URL`을 조직의 URL(SFTP To Go 대시보드에서 복사한)로 바꾸십시오:
 
 ```shell
 sftp -v URL 2>&1 | while read line; do echo "`date -u +"%Y-%m-%dT%H:%M:%SZ"` $line"; done
 ```
-For example:
+예제:
 
 ```shell
 sftp -v sftp://a9fe70b82zbb94f7160dfcBfcd7@yellow-rectangle-14793.sftptogo.com 2>&1 | while read line; do echo "`date -u +"%Y-%m-%dT%H:%M:%SZ"` $line"; done
 ```
-Paste your password when prompted to do so and then hit `enter/return`.
+요청이 있을 때 패스워드를 넣은 다음 `enter/return`을 누릅니다.
 
-Wait until you see the text `Connected to ... .sftptogo.com.`, and then type `quit` and hit `enter/return`.
+`Connected to ... .sftptogo.com.`이 표시 될 때까지 기다린 다음 `quit`을 입력하고 `enter/return`을 누릅니다.
 
-Copy the client log and send it to our support center along with your computer's timezone via the chat button found on the bottom-right corner of your screen, so that we can investigate what happened on the servers simultaneously.
+클라이언트 로그를 복사하여 화면 오른쪽 하단의 채팅 버튼을 통해 컴퓨터의 시간대(타임존 설정 정보)와 함께 서포트센터로 보내주시면 서버쪽에서 발생한 문제를 조사해 드립니다.
