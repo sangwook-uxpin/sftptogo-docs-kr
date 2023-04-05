@@ -1,8 +1,8 @@
 ---
-sidebar_label: 'Using Static IPs'
-title: 'Using Static IPs'
+sidebar_label: '정적 IP 사용'
+title: '정적 IP 사용'
 sidebar_position: 12
 ---
-SFTP To Go's hostnames are mapped to static IPs to allow customers the option to add outbound network rules to their local infrastructure. Keep in mind that some legacy systems require an IP address (instead of a hostname) to connect to an SFTP server.
+SFTP To Go의 호스트 이름은 정적 IP에 매핑되며 아웃바운드 네트워크 규칙을 로컬 인프라에 추가하는 옵션입니다. 일부 레거시 시스템에는 SFTP 서버에 연결하려면 IP 주소(호스트 이름 대신에)가 필요합니다.
 
-To find your host's underlying IP addresses, expand an existing credentials item in the credentials list. Then, click the *view IP addresses* link next to the host label.
+호스트의 기본사항인 IP 주소를 찾으려면 인증정보 목록에서 기존 인증정보 항목을 엽니다. 그런 다음 호스트 옆의 *view IP addresses* 링크를 클릭하십시오.
