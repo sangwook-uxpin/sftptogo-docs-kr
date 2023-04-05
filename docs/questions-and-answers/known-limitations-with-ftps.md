@@ -1,12 +1,12 @@
 ---
-sidebar_label: 'Known limitations with FTPS'
-title: 'Known limitations with FTPS'
+sidebar_label: 'FTPS의 일반적 제한사항'
+title: 'FTPS의 일반적 제한사항'
 sidebar_position: 5
 ---
-These are the known limitations with FTPS:
+이들은 FTPS에 대해서 이미 잘 알려진 제한사항입니다:
 
-1. Only Explicit mode is supported. Implicit mode is not supported.
-2. Only Passive mode is supported.
-3. Only STREAM mode is supported.
-4. Only Image/Binary mode is supported.
-5. TLS - PROT C (unprotected) TLS for the data connection is the default.
+1. Explicit 모드만 지원됩니다. Implicit 모드는 지원되지 않습니다.
+2. Passive 모드만 지원됩니다.
+3. STREAM 모드만 지원됩니다.
+4. Image/Binary 모드만 지원됩니다.
+5. 데이터 연결 시의 TLS - PROT C (보호되지 않은) TLS는 기본값입니다.
