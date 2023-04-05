@@ -1,19 +1,19 @@
 ---
-sidebar_label: 'Trial Accounts'
-title: 'Trial Accounts'
+sidebar_label: '트라이얼 계정'
+title: '트라이얼 계정'
 sidebar_position: 2
 ---
-When you start out with SFTP To Go, you are provided a 7 day free trial. You will be asked to select a plan for your trial account and enter your name, organization details, and credit card information. 
+SFTP To Go를 사용하기 시작하면 7일간의 무료 평가판이 제공됩니다. 트라이얼 계정을 위한 플랜을 선택하고, 이름, 회사 상세정보 및 신용카드 정보를 꼭 입력하셔야 합니다.
 
-Over the duration of the trial, the features included in the plan you signed up for will be available to you. If you wish to extend your trial or change the plan to a different one, please reach out to us via in-app chat found on the bottom-right corner of the screen.
+트라이얼 기간 중에는 선택한 플랜에 대한 기능을 사용할 수 있습니다. 트라이얼을 연장하거나 다른 플랜으로 변경하려면 앱 화면 오른쪽 하단에 있는 채팅으로 문의하십시오.
 
-Once your 7 days trial has ended, your plan will be automatically converted to a paying one of which you selected.
+7일간의 트라이얼이 종료되면 고객은 선택하셨던 유료 플랜으로 자동으로 전환됩니다.
 
-At any point during the trial, you may cancel your account by following these steps:
+트라이얼 기간 중이라면 아래의 순서로 언제든지 계정을 해지할 수 있습니다:
 
-1. Click **Settings** in the dashboard menu.
-2. Scroll down to the billing section and click **Open your billing portal**.
-3. On the billing portal page, click **Cancel Plan**.
+1. 대시보드 메뉴에서 **Settings(설정)** 을 클릭하십시오.
+2. 청구 섹션으로 스크롤을 내리신 후 **Open your billing portal(청구포털 열기)** 를 클릭하세요.
+3. 청구 포털에서 **Cancel Plan(플랜 해지)**를 클릭하십시오.
 
 
-For more pricing related questions and answers, visit SFTP To Go's [pricing page](https://sftptogo.com/pricing).
+가격에 대한 다른 질문과 답변은 SFTP To Go의 [가격 페이지](https://sftptogo.com/pricing)를 참조하십시오.
