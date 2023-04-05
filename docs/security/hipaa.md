@@ -1,44 +1,44 @@
 ---
-sidebar_label: 'HIPAA Compliance'
-title: 'HIPAA Compliance with SFTP To Go'
+sidebar_label: 'HIPAA 준수'
+title: 'SFTP To Go는 HIPAA 준수에 대응합니다'
 sidebar_position: 40
 ---
 
-The Health Insurance Portability and Accountability Act (HIPAA) establishes national standards for the privacy, security, and breach notification of individuals' protected health information (PHI). HIPAA applies to covered entities and their business associates, as defined by the law.
+의료 보험 및 책임에 관한 법률 (HIPAA; Health Insurance Portability and Accountability Act)은 개인 건강 정보 (PHI; Protected Health Information)에 대한 개인정보 보호, 보안 및 위반 알림을 위한 국가 표준을 확립했습니다. HIPAA는 법률로 정해진 대상사업자 및 그 협력사에 적용됩니다.
 
-Covered entities are healthcare providers, health plans, and healthcare clearinghouses that transmit any health information in electronic form in connection with certain administrative and financial transactions. Examples of covered entities include hospitals, doctors' offices, nursing homes, pharmacies, and health insurance companies.
+대상사업자은 의료서비스 제공자, 의료보험, 특정 서무 및 금융 거래에 관련하여 모든 건강정보를 전자적으로 이용하는 의료 관련기관을 칭합니다. 대상사업자의 예로는 병원, 클리닉, 요양원, 약국 및 건강보험 회사가 있습니다.
 
-Business associates are individuals or entities that perform certain functions or activities on behalf of a covered entity, such as billing companies, claims processing companies, third-party administrators, and other contractors or vendors. Business associates are also required to comply with HIPAA regulations.
+협력사는 청구 회사, 보험료 처리 회사, 서무업무 위탁업체 및 기타 계약자 및 공급 업체와 같은 대상사업자를 대신하여 특정 기능 또는 활동을 수행하는 개인 또는 사업자를 말합니다. 협력사 또한 HIPAA 규정을 준수해야합니다.
 
-Covered entities who require a secure cloud storage service can use SFTP To Go after signing a BAA (Business Associate Agreement) that establishes the parameters for the relationship between covered entity and business associate, outlining the responsibilities of the business associate in protecting the privacy and security of PHI.
+안전한 클라우드 스토리지 서비스가 필요한 대상사업자는 PHI 개인정보 보호 및 보안에 대한 협력사의 책임을 명시하고, 대상사업자와 협력사의 관계를 매개변수로 설정하도록 하는 BAA (Business Associate Agreement 협력사 계약)에 서명한 후에 SFTP To Go를 이용할 수 있습니다.
 
-SFTP To Go completes an annual assessment of security risks in addition to ongoing risk analysis, to ensure that our service meets changing security requirements and threats. 
+SFTP To Go는 지속적인 위험 분석 외에도 보안 위험에 대한 연간 평가를 수행하며, 당사의 서비스가 변화하는 보안 요건와과 위협에 대응하고 있음을 확고히 합니다.
 
-As part of our commitment to HIPAA compliance, SFTP To Go will sign a BAA for customers in any plan, but recommend using a plan that enables features according to your security requirements.
+HIPAA 규정 준수의 일환으로 SFTP To Go는 모든 플랜의 고객에 대해 BAA 체결을 제공할 수 있지만, 고객도 자사 보안 요건에 맞는 기능을 포함한 플랜을 이용할 것을 권장합니다.
 
-## Data location
+## 데이터 위치
 
-When you sign up to SFTP To Go, select the region you would like your data to be hosted on. As an American covered entity, select the United States region (AWS US-EAST-1, West Virginia).
+SFTP To Go에 가입할 때 데이터를 호스팅하려는 리전을 선택하십시오. 미국 대상사업자라면 US리전 (AWS US-EAST-1, West Virginia)를 선택하십시오.
 
-## PHI data protection
+## PHI 데이터 보호
 
-In transit, all communication is encrypted with AES-256 bit using the HTTPS, SFTP and FTPS protocols. At rest, files are encrypted on Amazon S3 using server side encryption with AES-256 bit.
+전송할 때 모든 통신은 HTTPS, SFTP 및 FTPS 프로토콜을 사용하여 AES-256 비트로 암호화됩니다. 휴지(at rest) 상태에서 파일은 Amazon S3의 AES-256 비트 서버 측 암호화에 의해 암호화됩니다.
 
-## Privacy and intrusion protection
+## 개인정보 보호 및 침입 방지
 
-* SFTP To Go's endpoints only allow access to the ports required to serve SFTP, FTPS and HTTPS.
+* SFTP의 엔드포인트는 SFTP, FTPS 및 HTTPS를 필요로 하는 포트에만 액세스할 수 있습니다.
 
-* Multi-factor authentication can be enabled and monitored for all administrators in an organization for web access.
+* 조직의 모든 관리자의 웹 액세스에 대하여 다요소인증(MFA)를 활성화하고 모니터링할 수 있습니다.
 
-* SFTP and FTPS passwords are by default strong and complex for all users and cannot be overridden by simple passwords.
+* SFTP 및 FTPS 패스워드는 디폴트로 모든 사용자에게 강력하고 복잡한 것으로 설정되어 있으며, 간단한 암호로 변경하는 것은 불가능합니다.
 
-* Inbound network rules allow IP safelisting (by specific IP addresses or CIDR notation for address range) is allowed in certain plans. If your security team requires IP safelisting, make sure to select the right plan for this.
+* IP 안전 목록(IP safelisting; 특정 IP 주소 또는 주소 범위에서의 CIDR표기로)을 허용하는 인바운드 네트워크 규칙은 특정 플랜에서 이용할 수 있습니다. 보안 팀이 IP 안전 목록를 필요로 할 경우에는 이를 이용할 수 있는 적합한 플랜을 선택하십시오.
 
-* File access audit logs are provided by request. The logs track timestamp, IP addresses, usernames, and file access. 
+* 파일 액세스 감사 로그는 요청에 따라 제공됩니다. 로그는 타임스탬프, IP 주소, 사용자 이름 및 파일 액세스를 추적합니다. 
 
-## Storage durability and high availability
+## 스토리지의 내구성 및 가용성
 
-SFTP To Go uses Amazon Web Services (AWS) for its infrastructure. SFTP To Go's storage layer is Amazon S3 (Simple Storage Service), which is a cloud-based storage solution that offers high durability and availability, making it a secure and reliable option for healthcare organizations that need to store and transmit protected health information (PHI) in compliance with HIPAA regulations.
+SFTP To Go는 Amazon Web Services (AWS)를 인프라로 사용하고 있습니다. SFTP To Go의 스토리지 레이어는 Amazon S3를 채용하고 있어 높은 내구성 및 가용성을 가지고 있습니다. 이로 인해 HIPAA 규정을 준수하는 보호 의료 정보 (PHI)를 저장하고 전송해야 하는 의료 기관을 위해 안전하고 신뢰할 수 있는 클라우드 기반 스토리지 솔루션입니다.
 
-Amazon Web Services' SLA for S3 is [99.9%](http://aws.amazon.com/s3/sla/). It is designed for 99.99% availability and 99.999999999% durability.
+Amazon Web Services S3의 SLA는 [99.9%](http://aws.amazon.com/s3/sla/)입니다. 99.99%의 가용성과 99.9999999%의 내구성을 실현할 수 있도록 설계되었습니다.
 
