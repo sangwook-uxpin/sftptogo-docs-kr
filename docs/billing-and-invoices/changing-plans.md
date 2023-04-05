@@ -1,12 +1,12 @@
 ---
-sidebar_label: 'Changing Plans'
-title: 'Changing Plans'
+sidebar_label: '플랜의 변경'
+title: '플랜의 변경'
 sidebar_position: 4
 ---
-To upgrade or downgrade your plan, go to your billing portal:
+플랜을 업그레이드하거나 다운그레이드하려면 Billing Portal (청구 포털)로 이동하십시오:
 
-1. Click **Settings** in the dashboard menu.
-2. Scroll to the billing section and click **Open your billing portal**.
-3. Click **Update plan**.
-4. Choose whether you'd like to pay monthly or annualy and pick a plan from the list.
-5. You will be billed pro rata taking into account your current plan, the time left in your current subscription period and the new plan you select.
+1. 대시보드 메뉴에서 **Setting(설정)** 을 클릭하십시오.
+2. 청구 섹션으로 스크롤하여 **Open your billing portal(나의 청구 포털 열기)** 을 클릭하십시오.
+3. **Update plan(플랜 업데이트하기)** 을 클릭하십시오.
+4. 월간 플랜 또는 연간 플랜인지를 선택한 후 목록에서 원하는 플랜을 선택하십시오.
+5. 현재 이용하고 있는 플랜의 서비스기간을 고려하여, 기존 플랜과 새로 선택한 플랜의 가격이 일할환산되어 청구됩니다.
