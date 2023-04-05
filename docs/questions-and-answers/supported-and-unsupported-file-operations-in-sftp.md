@@ -1,8 +1,8 @@
 ---
-sidebar_label: 'Supported and unsupported file operations in SFTP'
-title: 'Supported and unsupported file operations in SFTP'
+sidebar_label: 'SFTP에서 지원하거나 지원하지 않는 파일 작업'
+title: 'SFTP에서 지원하거나 지원하지 않는 파일 작업'
 sidebar_position: 4
 ---
-All common commands to create, read, update, and delete files and directories are supported.
+파일 및 디렉토리를 작성, 읽기, 업데이트 및 삭제하는 모든 일반적 명령을 지원하고 있습니다.
 
-Files are stored as objects on Amazon S3 and directories are managed as folder objects in S3. Directory rename operations, file append operations, changing ownership, permissions, file timestamps, and the use of symbolic and hard links are not supported.
+파일은 Amazon S3의 객체로 저장되며 디렉토리는 S3 폴더 객체로 관리됩니다. 디렉토리 이름 변경, 파일 추가 작업, 소유권 변경, 권한, 파일 타임스탬프 및 기호 및 하드 링크 사용은 지원되지 않습니다.
