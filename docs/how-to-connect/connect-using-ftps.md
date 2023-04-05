@@ -1,12 +1,12 @@
 ---
-sidebar_label: 'Connect using FTPS'
-title: 'Connect using FTPS'
+sidebar_label: 'FTPS를 사용하여 연결하기'
+title: 'FTPS를 사용하여 연결하기'
 sidebar_position: 2
 ---
-To connect to your SFTP To Go storage using the FTPS protocol, follow these general instructions:
+FTPS 프로토콜을 사용하여 SFTP To Go에 연결하려면 다음 단계를 따르십시오:
 
-1. Go to your organization's credentials list (click **Credentials** in the menu).
-2. In the credentials list, expand the credentials you'd like to use.
-3. Copy the host, username, and the password to your SFTP client of choice. Make sure you use the default FTPS port (21) in your connection.
+1. 조직의 인증정보 목록에 액세스하십시오. (메뉴에서 **Credentials(인증정보)** 을 클릭)
+2. 인증정보 목록에서 사용하고 있는 인증정보를 보여줍니다.
+3. 호스트, 사용자 이름 및 패스워드를 원하는 SFTP 클라이언트에 복사하십시오. 연결에는 디폴트 SFTP 포트 (21)를 사용해는 것을 확인하세요.
 
-Follow this [link](https://sftptogo.com/blog/guides/) for more examples. You can also find useful code snippets in the dashboard by clicking the credentials' menu button (...) and then click `<> Code Snippets`.
+더 많은 예제는 [이 링크](https://sftptogo.com/blog/guides/)를 참조하십시오. 또한 대시보드에서 인증정보 메뉴버튼(...)을 클릭하고 `<> Code Snippets`를 클릭하여 유용한 코드 스니펫을 찾으실 수 있습니다.
