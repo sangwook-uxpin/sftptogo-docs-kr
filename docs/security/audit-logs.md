@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'Audit Logs'
-title: 'Audit Logs'
+sidebar_label: '감사 로그'
+title: '감사 로그'
 sidebar_position: 40
 ---
-If you need to inspect what happened to a certain file or what a certain user was up to, reach out to our support and we'll provide you with the logs you need.
+특정 파일에 무슨 일이 있었는지 또는 특정 유저거 어떻게 사용하고 있는지 조사하고자 한다면 저희 서포트에 문의하십시오. 필요로 하는 로그정보를 제공해 드립니다.
