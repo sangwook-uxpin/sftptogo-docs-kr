@@ -1,6 +1,6 @@
 ---
-sidebar_label: 'Overview'
-title: 'Overview'
+sidebar_label: '개요'
+title: '개요'
 sidebar_position: 0
 slug: /
 ---
