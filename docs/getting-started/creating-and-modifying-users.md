@@ -1,73 +1,74 @@
 ---
-sidebar_label: 'Creating and Modifying Users'
-title: 'Creating and Modifying Users'
+sidebar_label: '사용자의 작성과 변경'
+title: '사용자의 작성과 변경'
 sidebar_position: 3
 ---
-## Credentials and permissions
+## 인증정보 및 권한에 대하여
 
-To create more credentials to use and access your storage:
+스토리지를 이용 및 접근하기 위해 더 많은 인증정보를 추가로 작성할 수 있습니다:
 
-1. Click **+ Add credentials**.
-2. Select a username. The username must be unique service-wide and at least 10 characters long. We recommend to leave it blank and have SFTP To Go generate a unique name for the user.
-3. This is an optional step: Select a home directory for the credentials. By default, each credential only has access to its own home directory (`/home/<username>`). You can change the credentials' home directory to have multiple credentials access the same directory. The users are chrooted to this directory, meaning that this directory acts as an isolated storage for them. They will not have access to any parent or sibling directories.
-4. Select the level of permissions accessible for the new user. By default, the user has read-only access to their home directory. For more information on the different permissionss, see the table below.
-5. Choose a nickname for the credentials (optional). This shows up in the UI solely as a friendly user name.
-6. Click **Add credentials**. The user will then be assigned a random password (and username, if left empty). 
+1. **+ Add credentials(+ 인증정보 추가하기)** 를 클릭합니다.
+2. 사용자 이름을 선택하십시오. 사용자 이름은 전체 서비스에 공통적이며 10개 이상의 문자여야합니다. 공란으로 남겨두어 SFTP To Go가 사용자이름을 자동으로 생성하는 것을 추천합니다.
+3. 이것은 선택가능한 단계입니다: 인증정보에 대한 홈 디렉토리를 선택하십시오. 기본적으로 각 인증정보는 홈 디렉토리 (`/home/<username>`). 에만 액세스 할 수 있습니다. 여러 인증정보가 동일한 디렉토리에 액세스할 수 있도록 인증정보의 홈 디렉토리를 변경할 수 있습니다. 사용자는이 디렉토리에 루트변경(chroot)됩니다. 다시 말해,이 디렉토리는 사용자를 위한 격리된 스토리지로 작동됩니다. 사용자는 상위/피어 디렉토리에 액세스할 수 없습니다.
+4. 새 사용자에게 액세스할 수 있는 권한 수준을 선택합니다. 기본적으로 사용자는 홈 디렉토리를 읽을 권리가 있습니다. 권한에 대한 자세한 내용은 아래 표를 참조하십시오.
+5. 인증정보에 대한 별칭을 선택하십시오 (선택사항). 이를 통해 친근한 사용자 이름으로 UI에 표시됩니다.
+6. **Add credentials(인증정보 추가하기)** 를 클릭합니다. 다음으로, 임의의 패스워드가 사용자에게 할당됩니다 (사용자 이름이 비어있는 경우 사용자 이름도 동일하게 자동생성됩니다).
 
 
-|  Permissions  |                                                                                            |
+|  권한  |                                                                                            |
 |------------|----------------------------------------------------------------------------------------------------------|
-| Read-only  | List files and directories<br/>Get files                                                                  |
-| Write-only | List files and directories<br/>Create directories<br/>Remove empty directories<br/>Put files (no overwrite) |
-| Read-Write | List files and directories<br/>Create directories<br/>Remove directories<br/>Put files<br/>Get files         |
-| None       | Disabled login  |
-| Full Access<br/>(root) | List files and directories<br/>Create directories<br/>Remove directories<br/>Put files<br/>Get files<br/>Access all directories (i.e. root dir is the account's root directory)         |
+| Read-only (읽기전용)  | 파일과 디렉토리를 나열합니다<br/>파일을 다운로드합니다                                                                  |
+| Write-only (쓰기전용) | 파일과 디렉토리를 나열합니다<br/>디렉토리를 만듭니다<br/>빈 디렉토리를 삭제합니다<br/>파일을 업로드합니다 (덮어 쓰기 안됨) |
+| Read-Write (읽기와 쓰기) | 파일과 디렉토리를 나열합니다<br/>디렉토리를 만듭니다<br/>디렉토리를 삭제합니다<br/>파일을 업로드합니다<br/>파일을 다운로드합니다         |
+| None (없음)       | 로그인을 무효화합니다  |
+| Full Access <br/>(전체 권한, 루트 디렉토리) | 파일과 디렉토리를 나열합니다<br/>디렉토리를 만듭니다<br/>디렉토리를 삭제합니다<br/>파일을 업로드합니다<br/>파일을 다운로드합니다<br/>
+모든 디렉토리에 액세스합니다 (root dir란 계정의 루트 디텍토리를 나타냅니다)         |
 
 
-### Editing user credentials
+### 사용자 인증정보의 편집
 
-You may edit existing credentials by clicking the menu button (...) for the particular user you wish to edit and then selecting **Edit credentials** from the menu. You may change the username, home directory, user's permissions, and the nickname. 
+기존 인증 정보를 편집하려면 편집하려는 사용자의 메뉴버튼(...)을 클릭하고 메뉴에서 **Edit credentials(인증정보 편집)** 을 선택하십시오. 사용자 이름, 홈 디렉토리, 사용자 권한 및 별칭을 변경할 수 있습니다.
 
-### Rotating user passwords
+### 유저 패스워드의 순환
 
-To rotate passwords, click the menu button (...) for the specific user and then select **Rotate Password** in the menu. A new password will be generated for the user and you'll be able to immediately copy it from the credentials list.
+패스워드를 순환하려면 선택한 사용자의 메뉴버튼(...)을 클릭하고 메뉴에서 **Rotate Password(패스워드 순환)** 을 선택하십시오. 사용자의 새 패스워드가 생성되며 인증정보 목록에서 즉시 복사할 수 있습니다.
 
-### Deactivating and reactivating users
+### 사용자의 비활성화 및 재활성화
 
-You may want to temporarily deactivate users so they won't be able to connect to your cloud storage. To do this, click the menu button (...) for the specific user and then select **Deactivate credentials** in the menu. 
+클라우드 스토리지에 연결하지 않도록 사용자를 임시로 비활성화할 수 있습니다. 이렇게 하려면 원하는 사용자의 메뉴버튼(...)을 클릭하고 메뉴에서 **Deactivate credentials(인증정보 비활성화)** 를 선택하십시오.
 
-:::note
-This will not affect open sessions or any of the user's files (i.e. they will be kept intact within your storage).
+:::비고
+오픈 세션이나 사용자 파일에 영향을 미치지 않습니다. (스토리지에 정상적으로 유지됩니다.)
 :::
 
-To reactivate users, click the menu button (...) for a deactivated user (displayed with a striped background) and then select **Activate credentials**.
+사용자를 다시 활성화하려면 비활성화된 사용자의 메뉴버튼(...)을 클릭하고 (배경이 줄무늬로 표시됨) **Activate credentials(인증정보 활성화)** 를 선택하십시오.
 
-### Adding and removing public SSH keys
+### SSH 공개 키의 추가와 삭제
 
-You can add public SSH keys to use with a username instead of a password. To import public SSH keys for this purpose, complete the following:
+패스워드 대신 사용자 이름으로 사용할 SSH 공개 키를 추가 할 수 있습니다. 이 목적을 위해 SSH 공개 키를 가져 오려면 다음을 수행하십시오:
 
-1. For the specific user you wish to add keys to, click *Import SSH key*.
-2. Generate a new key pair or copy an existing public key (usually ending with `.pub`). You can generate a new key pair using `ssh-keygen -t rsa` on Linux/Mac, or using PuTTYgen or openssh on Windows. Make sure you generate a new **RSA** key.
-3. Paste the public key. Make sure it begins with `ssh-rsa`.
-4. Click *Import SSH key*
+1. 사용자가 키를 추가하려면 *Import SSH key(SSH 키 가져오기)*를 클릭하십시오.
+2. 새 키 쌍을 생성하거나 기존 공개 키(일반적으로 확장자는 `.pub`)를 복사하십시오. Linux/Mac에서는 `ssh-keygen -t rsa`를, Windows에서는 PuTTYgen 또는 openssh를 사용하여 새 키 쌍을 만들 수 있습니다. 새로운 **RSA** 키가 생성된 것을 확하십시오.
+3. 공개 키를 붙여 넣으십시오. `ssh-rsa`로 시작합니다.
+4. *Import SSH key(SSH 키 가져오기)*를 클릭합니다.
 
-To remove an SSH key from a user, click the X next to the key and confirm deletion.
+사용자로부터 SSH 키를 삭제하려면 키 옆에 표시된 X를 클릭하여 삭제를 확인하십시오.
 
-### Editing inbound network rules for users
+### 사용자의 인바운드 네트워크 규칙을 편집하기
 
-Inbound network rules define IP address ranges that a user can connect to your storage within. They can be defined at the organization level (for all users) or at the user level (for specific users). The organization level and user level rules are combined with a single list with which an incoming connection is validated. This means that if a client's IP address is included in either the organization or the user list, it will be assumed valid.
+인바운드 네트워크 규칙은 사용자가 스토리지에 연결할 수있는 IP 주소 범위를 정의합니다. 조직 레벨 (모든 사용자 대상) 또는 사용자 레벨 (특정 사용자 대상)로 정의 할 수 있습니다. 조직 레벨 및 사용자 레벨 규칙은 하나의 목록에 통합되어 들어오는 연결을 확인합니다. 즉, 클라이언트의 IP주소가 조직 또는 사용자 목록에 포함된 경우 IP주소가 유효한 것으로 간주됩니다.
 
-By default, the organization inbound network rules contain a single rule allowing access from any IP address to any protocol (SFTP or FTPS). To restrict access, you will have to remove this rule or edit it to use a restrictive CIDR (Classless Inter-Domain Routing - an IP range).
+기본 디폴트 상태에서는, 조직의 인바운드 네트워크 규칙에는 IP주소의 모든 프로토콜 (SFTP 또는 FTPS)에 액세스 할 수있는 단일 규칙이 포함되어 있습니다. 액세스를 제한하려면 이 규칙을 삭제하거나 제한된 CIDR (Classless Inter-Domain Routing - IP 범위)을 사용하여 편집해야 합니다.
 
-:::note
-Editing inbound network rules is only available within certain plans. Read more about our different plans [here](https://sftptogo.com/pricing)
+:::비고
+인바운드 네트워크 규칙의 편집은 플랜에 따라 다릅니다. 각 플랜에 대한 자세한 내용은 [여기](https://sftptogo.com/pricing)를 클릭하십시오.
 :::
 
-To add user-level inbound network rules, please complete the following steps:
-1. Under the specific user, click **Add inbound rule**.
-2. Select the protocols to which you want to allow access to.
-3. Enter the CIDR or IP range you want to allow access from.
-4. Optionally add a description to help you identify the rules later.
-5. Click **Add inbound rule**.
+각 사용자에 대한 인바운드 규칙을 추가하려면 아래 단계를 따르십시오:
+1. 지정된 사용자에서 **Add inbound rule(인바운드 규칙 추가하기)** 를 클릭하십시오.
+2. 액세스를 허용하는 프로토콜을 선택하십시오.
+3. 액세스를 허용하는 CIDR 또는 IP 범위를 입력하십시오.
+4. 나중에 규칙을 식별하기 위해 설명을 추가 할 수도 있습니다.
+5. **Add inbound rule(인바운드 규칙 추가하기)** 를 클릭하십시오.
 
-To edit, disable, or delete a rule, click the menu button (...) next to the rule and select the action you'd like to perform.
+규칙을 편집, 무효화 또는 삭제하려면 규칙 옆에 메뉴버튼(...)을 클릭하고 실행할 작업을 선택하십시오.
