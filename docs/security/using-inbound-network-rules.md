@@ -1,12 +1,12 @@
 ---
-sidebar_label: 'Using Inbound Network Rules'
-title: 'Using Inbound Network Rules'
+sidebar_label: '인바운드 네트워크 규칙의 사용'
+title: '인바운드 네트워크 규칙의 사용'
 sidebar_position: 30
 ---
-Inbound network rules define IP address ranges from which a user can connect to your storage. They can be defined at the [organization level](../getting-started/organization-settings.md) (for all users) or at the [user level](../getting-started/creating-and-modifying-users.md) (for a specific user).
+인바운드 네트워크 규칙은 사용자가 스토리지에 연결할 수있는 IP 주소 범위를 정의합니다. [조직 레벨](../getting-started/organization-settings.md) (모든 사용자 대상) 또는 [사용자 레벨](../getting-started/creating-and-modifying-users.md) (특정 사용자 대상)로 정의 할 수 있습니다. 
 
-By default, users can connect to your organization's storage from any IP address.
+기본적으로 사용자는 모든 IP 주소에서 조직 스토리지에 연결할 수 있습니다.
 
-:::note
-Editing inbound network rules is only available with certain plans. Read more about our different plans [here](https://sftptogo.com/pricing).
+:::비고
+인바운드 네트워크 규칙의 편집은 플랜에 따라 다릅니다. 각 플랜에 대한 자세한 내용은 [여기](https://sftptogo.com/pricing)를 클릭하십시오.
 :::
