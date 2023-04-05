@@ -1,62 +1,62 @@
 ---
-sidebar_label: 'Webhook notifications'
-title: 'Using webhooks notification to trigger processes'
+sidebar_label: 'Webhook 통지'
+title: 'Webhook 통지를 이용한 특정 처리를 트리거하기'
 sidebar_position: 1
 ---
-Webhooks enable you to receive notifications whenever particular events occur within your SFTP To Go organization's storage. You can subscribe to notifications for the following events:
+Webhook은 SFTP To Go 조직의 스토리지 내의 특정 이벤트가 발생할 때 통지를 받게 할 수 있습니다. 다음 이벤트에 대해 통지를 설정할 수 있습니다:
 
-* File / directory creation
-* File / directory deletion
+* 파일 / 디렉토리 작성
+* 파일 / 디렉토리 삭제
 
-Webhook notifications are sent as HTTP POST requests to a URL of your choosing. To integrate with webhooks, you need to implement a server endpoint that can receive and handle these requests.
+WebHook 통지는 선택한 URL에 대한 HTTP POST 요청으로 전송됩니다. WebHook과 통합하려면 이러한 요청을 수신하고 처리 할 수있는 서버 엔드 포인트를 구현해야 합니다.
 
-:::info
-Please note that our webhooks don’t work with self-signed certs. If a webhook detects a self-signed cert, it will result in an error and no request will be sent.
+:::참고
+당사의 Webhook은 자체 서명된 인증서에서는 작동하지 않습니다. WebHook이 자체 서명 인증서를 감지하면 오류가 발생하고 요청이 전송되지 않습니다.
 :::
 
-To subscribe to webhooks, click **Webhooks** from the menu, and then click the `Add webhook` button.
+Webhook을 구독하려면 메뉴에서 **Webhooks** 를 클릭하고 `Add webhook` 버튼을 클릭하십시오.
 
-In the dialog that opens, fill out the following:
+열린 대화 상자에서 다음과 같이 입력하십시오:
 
-* Nickname (optional) - a descriptive name for your webhook.
-* Endpoint  
-  * URL - HTTPS URL of the endpoint that will receive all webhook notifications.
-  * Type - select one of the supported endpoint types:  
-    * Webhook - send a HTTP POST requests to the endpoint URL.
-    * Slack - send a Slack message to the endpoint URL which should be a valid [Slack incoming webhook URL](https://slack.com/oauth/v2/authorize?client_id=754603809072.3867924020054&scope=incoming-webhook&user_scope=).  
-* Authorization Header (optional) - a custom `Authorization` header that will be included with all webhook notifications.
-* Topics - select the types of notifications you want to be informed about. You must include at least one topic.
-* Filter - apply filtering rules to trigger notifications that meet the specified criteria, i.e. have (or don't have) certain properties.
+* 별명 (선택 사항) - Webhook의 설명 이름입니다.
+* 엔드포인트  
+  * URL - 모든 webhook 알림을 받는 엔드포인트의 HTTPS URL
+  * 유형 - 지원되는 엔드포인트 유형 중 하나를 선택하십시오:  
+    * Webhook - 엔드포인트 URL에 HTTP POST 요청을 송신합니다.
+    * Slack - 유효한 [Slack 착신 webhook URL](https://slack.com/oauth/v2/authorize?client_id=754603809072.3867924020054&scope=incoming-webhook&user_scope=)인 엔드포인트 URL로 Slack 메시지를 보냅니다.  
+* 인증 헤더 (선택사항) - 모든 Webhook 통지에 포함된 커스텀 Authorization 헤더입니다.
+* 토픽 - 알림을 받고자 하는 통지 유형을 선택하십시오. 하나 이상의 토픽을 포함해야 합니다.
+* 필터 - 필터링 규칙을 적용하여 지정된 조건을 충족하는, 즉 특정 속성을 갖는(또는 갖지 않는) 통지를 트리거합니다.
 
-Finish by clicking `Add webhook`.
+`Add webhook` 를 클릭하여 완료합니다.
 
-### Securing Webhooks
+### Webhook의 안전성 확보
 
-Once a webhook is created, a signing secret is generated and displayed one time. 
+Webhook을 만들 때 서명의 비밀이 생성되어 단 한 번만 표시됩니다. 
 
-Each request is signed by SFTP To Go in the X-Hub-Signature header. If you’d like to verify the authenticity of our request, copy the signing secret and use it to verify the webhook signature. You can rotate the signing secret at any time to be assigned a new one.
+각 요청은 X-Hub-Signature 헤더를 통해 SFTP To Go로 서명됩니다. 요청의 신뢰성을 확인하려면 서명의 비밀을 복사하여 Webhook 서명을 인증하면 됩니다. 서명의 비밀은 항상 갱신하여 새롭게 할당할 수 있습니다.
 
-You may also use an authorization header to verify that the request did, indeed, come from SFTP To Go. When properly set, the authorization header is passed through in the `Authorization` header in the request. It should be validated using the authorization mechanism of your choice on through your server.
+또한 인증 헤더를 사용하여 요청이 실제로 SFTP To Go에서 진행되는지 확인할 수 있습니다. 올바르게 설정되면 인증 헤더가 요청의 `인증` 헤더로 전달됩니다. 이 헤더는 서버에서 선택한 인증 메커니즘을 사용하여 검증되어야 합니다.
 
-### Managing Webhooks
+### Webhook 관리
 
-After creating a webhook, you may do the following:
+Webhook을 만든 후 다음 작업을 수행할 수 있습니다:
 
-* Pause/Resume - temporarily pause or resume webhook notifications.
-* Rotate secret - request a new signing secret. See [Securing Webhooks](#securing-webhooks)
-* Ping webhook - manually send a test event to your endpoint
-* View deliveries - View a log of the notifications that SFTP To Go has enqueued for delivery. Each notification has a `status` (one of `Succeeded`, `Failed`, 'Pending'), `Created` timestamp, `ID`, `Topic` (one of `file.created`, `file.deleted`, `webhook.ping`) and `Duration`. You may also view the `Request payload`, `Response code`, and `Response body`as well as manually send a webhook payload from within the webhook delivery dialog.
+* 일시정지 / 재개 - Webhook 통지를 일시 정지하거나 재개합니다.
+* 비밀 회전 - 새로운 사인 비밀 (signing secret)을 요청합니다. [Webhook 안정성](#securing-webhooks)을 참조하십시오.
+* Ping Webhook - 엔드포인트로 테스트 이벤트를 수동으로 보냅니다.
+* 송신로그 표시 - SFTP To Go가 송신한 통지의 로그를 보여줍니다. 각 통지는 상태 (`Succeeded`, `Failed`, `Pending` 중 하나), `Created` 타임 스탬프, `ID`, `Topic` (`file.created`, `file.delete`, `webhook.ping` 중 하나) 및 `Duration`이 포함됩니다. 또한 `Request payload`, `Response code`, 및 `Response body`을 표시하고 Webhook 배포 대화상자에서 수동으로 Webhook 페이로드를 수동으로 보낼 수도 있습니다. 
 
-### Receiving Webhooks
+### Webhook 받기
 
-When a webhook event that you've subscribed to occurs, SFTP To Go sends a POST request to your server endpoint consisting of the events’ details.
+등록한 Webhook 이벤트가 발생하면 SFTP To Go는 서버 엔드포인트에 POST 요청을 보냅니다.
 
-You can verify the authenticity of these requests through any of the following ways:
+이 요청의 진위는 다음 방법 중 하나에서 확인할 수 있습니다:
 
-* The request’s Authorization header matches the value you provided when subscribing to notifications.
-* The request’s X-Hub-Signature header contains the HMAC SHA256 signature of the request body (signed with the given secret value provided when subscribing).
+* 요청의 인증 헤더는 통지에 가입할 때 제공된 값과 일치하는가.
+* 요청된 X-Hub-Signature 헤더에는 요청 본문의 HMAC SHA256 서명 (구독 시점에 제공된 규정된 비밀값으로 서명)이 포함됩니다.
 
-A resulting webhook notification request resembles the following:
+결과는 다음과 같은 Webhook 통지 요청입니다:
 
 ```
 POST https://webhook.site/394f2074-e56f-4110-7bf7-ca14a1f48b7c
@@ -106,19 +106,19 @@ X-Hub-Signature: cLcN5U5x+jHEkANnVaaRwBw7yE4uv4pXdjcY9Cajc7M=
 }
 ```
 
-You should always respond with a 200-level status code to indicate that you had received the notification. SFTP To Go ignores the body of your response, so a 204 status with an empty body is ideal:
+알림을 받았음을 보여 주려면 항상 200 레벨 상태 코드로 응답해야 합니다. SFTP To Go는 응답의 본문을 무시하기 때문에 빈 204 상태가 이상적입니다:
 
 ```
 204 No Content
 ```
 
-:::note
-If you do not return a 200-level status code, SFTP To Go records the failure. The failure can be viewed in the deliveries log.
+:::비고
+200 레벨 상태 코드를 반환하지 않으면 SFTP To Go는 실패라고 기록합니다. 실패의 내용은 송신로그에서 확인할 수 있습니다.
 :::
 
-The `Actor` key contains information on the user who performed the action. If the action was performed by an SFTP user, the `Type` would be `User` and the `Id` would be the username. If the action was performed by an IAM user (via S3 APIs), the `Type` would be `IAM` and the `Id` would be the IAM user ID.
+`Actor` 키에는 작업을 실행 한 사용자에 대한 정보가 포함되어 있습니다. 작업이 SFTP 사용자에 의해 실행될 경우 `Type` 은 `User` 이고, `Id` 는 사용자 이름입니다. IAM 사용자 (S3 API를 통해)에 의해 작업이 실행되면 `Type` 은 `IAM` 이고 `Id` 는 IAM의 사용자 ID입니다.
 
-### file.created Event Format
+### file.created 이벤트 형식
 
 ```json
 {
@@ -157,12 +157,12 @@ The `Actor` key contains information on the user who performed the action. If th
 }
 ```
 
-:::tip
-When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::활용팁
+Data.Path의 값이 `/`로 끝나면 디렉토리가 생성되었음을 나타냅니다. 그렇지 않으면 파일이 생성되었음을 나타냅니다.
 :::
 
 
-### file.deleted Event Format
+### file.deleted 이벤트 형식
 
 ```json
 {
@@ -201,12 +201,12 @@ When a Data.Path value ends with `/`, this indicates that a directory has been c
 }
 ```
 
-:::tip
-When a Data.Path value ends with `/`, this indicates that a directory has been created. In all other instances, a file had been created.
+:::활용팁
+Data.Path의 값이 `/`로 끝나면 디렉토리가 생성되었음을 나타냅니다. 그렇지 않으면 파일이 생성되었음을 나타냅니다.
 :::
 
 
-### webhook.ping Event Format
+### webhook.ping 이벤트 형식
 
 ```json
 {
