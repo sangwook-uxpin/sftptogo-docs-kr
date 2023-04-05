@@ -4,8 +4,8 @@ title: 'Overview'
 sidebar_position: 0
 slug: /
 ---
-[SFTP To Go](https://www.sftptogo.com) is a fully-managed cloud storage that uses standard protocols such as SFTP, FTPS, Amazon S3, and HTTPS to achieve secure file access, transfer, and management. SFTP To Go enables secure data exchange with partners, vendors and customers in a standard protocol without purchasing, running, or maintaining your own servers and storage. It is based on Amazon Web Services (AWS), making it highly scalable and accessible with multi-AZ architecture.
+[SFTP To Go](https://www.sftptogo.com)는 안전한 파일 액세스, 전송 및 관리를 제공하는 SFTP, FTPS, Amazon S3 및 HTTPS와 같은 표준 프로토콜을 사용하는 완전히 관리되는 클라우드 스토리지입니다. SFTP To Go를 사용하면 파트너, 공급업체, 또는 고객과 표준 프로토콜을 통한 안전한 데이터 교환을 할 수 있습니다. AWS (Amazon Web Services)를 기반으로하기 때문에 다중-AZ 구성에 의한 확장성과 접근성이 높습니다.
 
-SFTP To Go was designed for instant access with a simple interface to manage users and files, as well as to allow integration and automation with other applications through the use of APIs and webhook notifications.
+SFTP To Go는 사용자나 파일을 관리하는 간단한 인터페이스로 즉시 액세스할 수 있도록 설계되었으며 API 및 WebHook 알림을 사용하여 다른 응용 프로그램과 통합 및 자동화를 할 수 있습니다.
 
-These docs are here to help you with any questions you may have. If there's anything else you'd like to see here or if you have other questions or feedback, please feel free to reach out to us via in-app chat (you'll find the chat button at the bottom-right corner of the screen).
+이 문서는 여러분이 궁금해할 내용을 돕기 위한 것입니다. 여기에 게시되지 않은 내용이나 질문 또는 피드백 등이 있으시다면 앱에서 채팅으로 문의해 주세요(화면 오른쪽 하단에 채팅 기능이 있습니다).
