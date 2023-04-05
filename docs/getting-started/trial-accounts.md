@@ -13,7 +13,7 @@ SFTP To Go를 사용하기 시작하면 7일간의 무료 평가판이 제공됩
 
 1. 대시보드 메뉴에서 **Settings(설정)** 을 클릭하십시오.
 2. 청구 섹션으로 스크롤을 내리신 후 **Open your billing portal(청구포털 열기)** 를 클릭하세요.
-3. 청구 포털에서 **Cancel Plan(플랜 해지)**를 클릭하십시오.
+3. 청구 포털에서 **Cancel Plan(플랜 해지)** 를 클릭하십시오.
 
 
 가격에 대한 다른 질문과 답변은 SFTP To Go의 [가격 페이지](https://sftptogo.com/pricing)를 참조하십시오.
