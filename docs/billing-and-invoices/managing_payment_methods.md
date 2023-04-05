@@ -1,30 +1,30 @@
 ---
-sidebar_label: 'Mananging your payment methods'
-title: 'Mananging your payment methods'
+sidebar_label: '지불방법의 관리'
+title: '지불방법의 관리'
 sidebar_position: 2
 ---
-SFTP To Go automatically charges your organization's default payment method at the beginning of a new subscription period (monthly or annually). If you need to modify the payment methods you entered when you first sign up, go to your billing portal.
+SFTPTo Go는 새로운 구독 기간(매월 또는 매년)의 첫날에 기본 결제방법으로 자동으로 과금되어 집니다. 가입할 때 설정했던 지불 방법을 변경하려면 Billing Portal(청구 포털)에서 변경할 수 있습니다.
 
-To view your payment methods:
+결제방법의 표시:
 
-1. Click **Settings** in the dashboard menu.
-2. Scroll to the billing section and click **Open your billing portal**.
-3. Scroll to the payment method section.
+1. 대시보드 메뉴에서 **Setting(설정)** 을 클릭하십시오.
+2. 청구 섹션으로 스크롤하여 **Open your billing portal(나의 청구 포털 열기)** 을 클릭하십시오.
+3. 지불 방법 섹션으로 스크롤하십시오.
 
-To add a payment method:
+결제방법의 추가:
 
-1. Click **+ Add payment method**.
-2. Enter your credit card details.
-3. Click **Add** to store your credit card information securely for future use.
+1. **+ Add payment method(+결제방법 추가하기)** 를 클릭하십시오.
+2. 신용카드의 세부 사항을 입력하십시오.
+3. 향후 사용하기 위해 신용카드 정보를 저장하려면 **Add(추가하기)** 를 클릭하십시오.
 
-To modify a payment method:
+결제방법의 변경:
 
-1. Click the menu button (...) next to the payment method.
-2. Click **Make default** to make a payment method the default for your organization so that it would be charged automatically.
+1. 결제 방법 옆에 있는 메뉴버튼(...)을 클릭하십시오.
+2. **Make default(기본값으로 하기)** 를 클릭하여 해당 지불방법를 기본값으로 하여 자동 청구되도록 합니다.
 
-To remove a payment method:
+결제방법의 삭제:
 
-1. Click the menu button (...) next to the payment method.
-2. Click **Delete** to permanently remove your credit card information.
+1. 결제방법 옆에 있는 메뉴버튼(...)을 클릭하십시오.
+2. **Delete(삭제)** 를 클릭하여 신용카드 정보를 영구적으로 삭제하십시오.
 
 
